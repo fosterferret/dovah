@@ -1,32 +1,10 @@
-import { css } from "styled-components"
-
-const screenSizesInPx = {
-  xxl: 1280,
-  xl: 1024,
-  lg: 720,
-  m: 480,
-  s: 376,
-  xs: 330,
-}
-
-const generateMediaQueries = () => {
-  return Object.keys(screenSizesInPx).reduce((acc, screen) => {
-    const em = screenSizesInPx[screen] / 16
-    acc[screen] = (...args) => css`
-      @media (max-width: ${em}em) {
-        ${css(...args)};
-      }
-    `
-    return acc
-  }, {})
-}
-
 export default {
   preload:
     "https://fonts.googleapis.com/css?family=Inconsolata|La+Belle+Aurore&display=swap",
   colors: {
     darkNavyStart: "#1C3451",
     darkNavyEnd: "#16283C",
+    lightYellow: "#FCE257",
     darkYellow: "#E7CC3F",
     bookYellow: "#E5E5E5",
     darkGrey: "#798694",
@@ -38,7 +16,6 @@ export default {
     Inconsolata: "Inconsolata, Roboto Mono, Monaco, monospace",
     LaBelle: "La Belle Aurore, cursive",
   },
-  media: generateMediaQueries(),
 
   fontSizes: {
     xs: "12px",
