@@ -1,6 +1,6 @@
 export default {
   preload:
-    "https://fonts.googleapis.com/css?family=Inconsolata|La+Belle+Aurore&display=swap",
+    ["https://fonts.googleapis.com/css?family=Inconsolata|La+Belle+Aurore&display=swap"],
   colors: {
     darkNavyStart: "#1C3451",
     darkNavyEnd: "#16283C",

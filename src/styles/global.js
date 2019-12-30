@@ -6,6 +6,7 @@ import LocalFonts from "./fonts"
 const { colors, fontSizes, fonts } = theme
 
 export default createGlobalStyle`
+${props => props.theme.preload.map(url => '@import url("' + url + '");')}
   ${reset}
   ${LocalFonts}
   * {
@@ -44,7 +45,6 @@ export default createGlobalStyle`
     min-height: 100%;
     color: #fff;
     font-family: ${fonts.FuturaPT};
-    backface-visibility: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
