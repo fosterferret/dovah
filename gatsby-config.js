@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Francis Bulus | Software Engineer`,
+    description: `Francis Bulus is a software engineer from Nigeria who creates dynamic experiences for the web.`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -15,6 +15,15 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'content',
+        path: 'content',
+      },
+    },
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -30,5 +39,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+   
   ],
 }
