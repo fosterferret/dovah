@@ -1,27 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import useHero from "../hooks/use-hero"
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+// import Image from "../components/image"
+// import SEO from "../components/seo"
 
 const IndexPage = () => {
   const hero = useHero()
+  console.log(hero)
   return (
     <Layout>
-      <SEO title="Home" />
-      <pre>{JSON.stringify(hero)}</pre>
-      <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: hero.html }}
-        />
-      <h1>FRANCIS BULUS</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
-      <Link to="/page-2/">Go to page 2</Link>
+     
     </Layout>
   )
 }

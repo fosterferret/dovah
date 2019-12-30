@@ -2,7 +2,7 @@ import styled, { css } from "styled-components"
 import media from "./media"
 import theme from "./theme"
 
-export const Wrapper = styled.div`
+export const ToggleWrapper = styled.div`
   display: none;
   height: 15px;
   width: 1.75rem;
@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
   }
 
   ${props =>
-    props.open
+    props.isOpen
       ? css`
           transform: rotate(90deg);
           align-items: center;

@@ -11,9 +11,9 @@ const screenSizesInPx = {
 
 const media = () => {
   return Object.keys(screenSizesInPx).reduce((acc, screen) => {
-    const em = screenSizesInPx[screen] / 16
+    const emValue = screenSizesInPx[screen] / 16
     acc[screen] = (...args) => css`
-      @media (max-width: ${em}em) {
+      @media (max-width: ${emValue}em) {
         ${css(...args)};
       }
     `
@@ -21,4 +21,4 @@ const media = () => {
   }, {})
 }
 
-export default media;
+export default media();
