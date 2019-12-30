@@ -4,7 +4,7 @@ import { css } from "styled-components"
 import theme from "./theme"
 const { colors, fontSizes, fonts } = theme
 
-export const mixins ={
+export const mixins = {
   flexColumn: css`
     display: flex;
     flex-direction: column;
@@ -81,9 +81,34 @@ export const Section = styled.section`
   ${media.tablet`padding: 100px 0;`};
 `
 
-
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-`;
+`
+
+export const spaces = {
+  lvl1: "5rem",
+  lvl2: "4rem",
+  lvl3: "3rem",
+  lvl4: "2rem",
+  lvl5: "1rem",
+  lvl6: ".5rem",
+  lvl7: ".25rem",
+}
+
+const rule = (label, value) => `${label}: ${value};`
+
+export const generateSpace = padding =>
+  css`
+    ${rule(padding, spaces.lvl1)}
+    ${media.tablet`
+      ${rule(padding, spaces.lvl3)}
+    `}
+    ${media.phablet`
+      ${rule(padding, spaces.lvl3)}
+    `}
+    ${media.mobile`
+      ${rule(padding, spaces.lvl4)}
+    `}
+  `

@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import styled, { css } from 'styled-components'
 import media from "../styles/media"
 import theme from "../styles/theme"
+import { generateSpace } from '../styles/shared-styles'
 
 
 const NavWrapper = styled.nav`
@@ -15,7 +16,7 @@ const NavWrapper = styled.nav`
   align-items: flex-end;
   justify-content: space-between;
   pointer-events: none;
-  padding: 40px;
+  ${generateSpace('padding')};
   counter-reset: li;
   
   ul:last-child li {
