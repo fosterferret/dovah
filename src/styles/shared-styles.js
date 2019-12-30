@@ -78,7 +78,7 @@ export const Section = styled.section`
   padding: 145px 0;
   max-width: 900px;
 
-  ${media.tablet`padding: 100px 0;`};
+  ${media.tablet`padding: 10px 20px;`};
 `
 
 export const ContentWrapper = styled.div`
