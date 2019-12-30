@@ -9,11 +9,7 @@ const Wrapper = styled(Section)`
   ${mixins.flexCenter};
   flex-direction: column;
   align-items: flex-start;
-  min-height: 100vh;
-  ${media.tablet`padding-top: 150px;`};
-  div {
-    width: 100%;
-  }
+  height: 100vh;
 `
 
 const StyledIntro = styled.div`
