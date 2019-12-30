@@ -73,19 +73,6 @@ export const mixins = {
   `,
 }
 
-export const Section = styled.section`
-  margin: 0 auto;
-  padding: 145px 0;
-  max-width: 900px;
-
-  ${media.tablet`padding: 10px 20px;`};
-`
-
-export const ContentWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-`
 
 export const spaces = {
   lvl1: "5rem",
@@ -112,3 +99,18 @@ export const generateSpace = padding =>
       ${rule(padding, spaces.lvl4)}
     `}
   `
+
+export const Section = styled.section`
+  margin: 0 auto;
+ ${generateSpace('padding')};
+  max-width: 900px;
+
+  ${media.tablet`padding: 10px 20px;`};
+`
+
+export const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`
+
