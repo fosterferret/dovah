@@ -2,20 +2,21 @@ import { css } from "styled-components"
 import "../fonts/font.css"
 
 export default css`
+
+@font-face {
+    font-family: "Futura PT";
+    src: url("FuturaPT-Light.woff2") format("woff2"),
+      url("FuturaPT-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+  }
+
   @font-face {
     font-family: "Futura PT";
     src: url("FuturaPT-HeavyObl.woff2") format("woff2"),
       url("FuturaPT-HeavyObl.woff") format("woff");
     font-weight: 400;
     font-style: italic;
-  }
-
-  @font-face {
-    font-family: "Futura PT";
-    src: url("FuturaPT-Light.woff2") format("woff2"),
-      url("FuturaPT-Light.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
   }
 
   @font-face {
@@ -43,7 +44,7 @@ export default css`
   }
 
   @font-face {
-    font-family: "Futura PT Book";
+    font-family: "Futura PT";
     src: url("FuturaPT-Book.woff2") format("woff2"),
       url("FuturaPT-Book.woff") format("woff");
     font-weight: normal;
@@ -67,7 +68,7 @@ export default css`
   }
 
   @font-face {
-    font-family: "Futura PT Demi";
+    font-family: "Futura PT";
     src: url("FuturaPT-Demi.woff2") format("woff2"),
       url("FuturaPT-Demi.woff") format("woff");
     font-weight: 600;
@@ -91,7 +92,7 @@ export default css`
   }
 
   @font-face {
-    font-family: "Futura PT Extra";
+    font-family: "Futura PT";
     src: url("FuturaPT-ExtraBold.woff2") format("woff2"),
       url("FuturaPT-ExtraBold.woff") format("woff");
     font-weight: 800;
@@ -99,7 +100,7 @@ export default css`
   }
 
   @font-face {
-    font-family: "Futura PT";
+    font-family: "Futura PT Book";
     src: url("FuturaPT-Bold.woff2") format("woff2"),
       url("FuturaPT-Bold.woff") format("woff");
     font-weight: bold;
@@ -120,5 +121,13 @@ export default css`
       url("FuturaPT-BookObl.woff") format("woff");
     font-weight: normal;
     font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Futura PT";
+    src: url("FuturaPT-Light.woff2") format("woff2"),
+      url("FuturaPT-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
   }
 `

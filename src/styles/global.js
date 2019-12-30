@@ -26,10 +26,6 @@ ${props => props.theme.preload.map(url => '@import url("' + url + '");')}
   html {
     width: 100%;
     height: 100%;
-    font-size: ${fontSizes.md} 
-    ${media.xl`
-      font-size: 14px;
-    `}
   }
 
   #root {
@@ -40,16 +36,19 @@ ${props => props.theme.preload.map(url => '@import url("' + url + '");')}
   }
 
   body {
-    background-color: ${colors.darkNavyStart};
+    background-color: ${colors.darkNavyEnd};
     width: 100%;
     min-height: 100%;
     color: #fff;
     font-family: ${fonts.FuturaPT};
+    font-size: ${fontSizes.xl} 
+    ${media.tablet`font-size: ${fontSizes.md};`}
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+    font-weight: 600 !important;
     line-height: inherit;
+    font-family: ${fonts.FuturaPT};
   }
 
   a {

@@ -1,12 +1,12 @@
 import { css } from "styled-components"
 
 const screenSizesInPx = {
-  xxl: 1280,
-  xl: 1024,
-  lg: 720,
-  m: 480,
-  s: 376,
-  xs: 330,
+  large: 1280,
+  desktop: 1024,
+  tablet: 720,
+  phablet: 480,
+  mobile: 376,
+  tiny: 330,
 }
 
 const media = () => {
