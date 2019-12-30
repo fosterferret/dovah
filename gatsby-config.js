@@ -25,7 +25,6 @@ module.exports = {
         path: `${__dirname}/content/about`,
       },
     },
-    `gatsby-plugin-mdx`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
