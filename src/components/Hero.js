@@ -9,7 +9,7 @@ const Wrapper = styled(Section)`
   ${mixins.flexCenter};
   flex-direction: column;
   align-items: flex-start;
-  height: 100vh;
+  max-height: 100vh;
 `
 
 const StyledIntro = styled.div`
