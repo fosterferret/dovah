@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Francis Bulus | Software Engineer`,
     description: `Francis Bulus is a software engineer from Nigeria who creates dynamic experiences for the web.`,
-    author: `@gatsbyjs`,
+    author: `Francis Bulus`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
