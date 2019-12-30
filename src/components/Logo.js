@@ -7,7 +7,7 @@ const Logo = () => (
     <Tally
       width={100}
       height={52}
-      style={{ position: "absolute", top: "58" }}
+      style={{ position: "absolute", top: "35" }}
     />{" "}
   </header>
 )
