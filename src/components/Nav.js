@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled, { css } from 'styled-components'
-import media from "../styles/media"
+// import media from "../styles/media"
 import theme from "../styles/theme"
 import { generateSpace } from '../styles/shared-styles'
 
@@ -49,10 +49,6 @@ const NavWrapper = styled.nav`
     }
   }
   
-  ${media.tablet`
-    position: static;
-    padding: 0;
-  `}
 `
 
 export const Nav = styled.ul`
