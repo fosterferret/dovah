@@ -3,7 +3,7 @@ import React from "react"
 import useHero from "../hooks/use-hero"
 import Layout from "../components/layout"
 import Hero from "../components/Hero"
-import Header from "../components/Header.js"
+import Logo from "../components/Logo.js"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 
@@ -12,7 +12,7 @@ const IndexPage = () => {
   console.log(hero)
   return (
     <Layout>
-      <Header/>
+      <Logo/>
       <Hero data={hero} />
     </Layout>
   )

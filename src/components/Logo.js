@@ -1,7 +1,7 @@
 import React from "react"
 import Tally from "../svgs/logo.svg"
 
-const Header = () => (
+const Logo = () => (
   <header style={{ display: "flex", justifyContent: "center" }}>
     {" "}
     <Tally
@@ -12,4 +12,4 @@ const Header = () => (
   </header>
 )
 
-export default Header
+export default Logo
