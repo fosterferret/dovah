@@ -626,17 +626,12 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
-}
 
 body {
   font-family: "Futura PT Book";
   font-weight: 300;
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 19px;
+  line-height: 26px;
   color: #1d344e;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -647,4 +642,14 @@ h1 {
   font-family: "Futura PT";
   font-weight: 700;
   font-size: 38px;
+}
+
+@media only screen and (max-width: 580px) {
+  body {
+    font-size: 100%;
+  }
+}
+
+p {
+  padding: 5px;
 }
