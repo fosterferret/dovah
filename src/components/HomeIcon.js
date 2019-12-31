@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
     width: 1.65rem;
     ${media.tablet`
     position: fixed;
-    margin-top: -18px;
+    margin-top: -20px;
     width: 1.95rem;
   `}
   }
