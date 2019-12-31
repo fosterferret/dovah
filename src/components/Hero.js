@@ -40,8 +40,8 @@ const StyledTitle = styled.h2`
     color: ${theme.colors.darkYellow};
   }
 
-  ${media.tablet`font-size: 35px;`};
-  ${media.mobile`font-size: 30px;`};
+  ${media.tablet`font-size: 37px;`};
+  ${media.mobile`font-size: 31px;`};
 `
 
 // const FancyRandomness = styled.p`
@@ -52,7 +52,7 @@ const StyledTitle = styled.h2`
 // `
 
 const StyledDescription = styled.div`
-  margin-top: 25px;
+  margin-top: 23px;
   width: 100%;
   max-width: 650px;
   font-size: ${theme.fontSizes.s};
