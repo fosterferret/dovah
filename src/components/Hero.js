@@ -28,7 +28,7 @@ const StyledIntro = styled.div`
   color: ${theme.colors.darkYellow};
   font-size: ${theme.fontSizes.xl};
   font-weight: normal;
-  margin: 0 0 20px 0px;
+  margin: 0 0 10px 0px;
 `
 
 const StyledTitle = styled.h2`
@@ -60,7 +60,7 @@ const StyledDescription = styled.div`
   color: #f0f2e9;
 `
 
-const fancy = ["<h1>", "<h2/>"]
+const fancy = ["<h2>", "<h2/>"]
 
 const Hero = ({ data }) => {
   const { frontmatter, html } = data
