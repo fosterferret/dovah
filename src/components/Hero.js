@@ -26,7 +26,7 @@ const StyledCTAButton = styled.a`
   ${mixins.bigButton};
   align-self: center;
   margin-top: 50px;
-  width: 8.2em;
+  width: 8.35em;
 `
 
 const StyledIntro = styled.div`
