@@ -16,6 +16,7 @@ const Container = styled(CustomSection)`
   flex-direction: column;
   align-items: flex-start;
   height: 100vh;
+  ${media.tablet`padding: 3rem;`};
 `
 
 const StyledCTAButton = styled.a`
@@ -47,7 +48,7 @@ const FancyRandomness = styled.p`
   font-family: "La Belle Aurore", cursive;
   color: #798694;
   font-size: 17.5px;
-  margin-left: 15px
+  margin-left: 15px;
 `
 
 const StyledDescription = styled.div`
