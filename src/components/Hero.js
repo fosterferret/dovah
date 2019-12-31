@@ -16,7 +16,7 @@ const Container = styled(CustomSection)`
   flex-direction: column;
   align-items: flex-start;
   height: 100vh;
-  ${media.tablet`padding: 2.5rem;`};
+  ${media.tablet`padding: 2.3rem;`};
 `
 
 const StyledCTAButton = styled.a`
@@ -29,13 +29,13 @@ const StyledIntro = styled.div`
   color: ${theme.colors.darkYellow};
   font-size: ${theme.fontSizes.xl};
   font-weight: normal;
-  margin: 0 0 8px 0px;
+  margin: 0 0 18px 0px;
 `
 
 const StyledTitle = styled.h2`
   font-size: 45px;
   color: ${theme.colors.titleWhite};
-  line-height: 1.1;
+  line-height: 1.2;
   span {
     color: ${theme.colors.darkYellow};
   }
@@ -44,15 +44,15 @@ const StyledTitle = styled.h2`
   ${media.mobile`font-size: 28px;`};
 `
 
-const FancyRandomness = styled.p`
-  font-family: "La Belle Aurore", cursive;
-  color: #798694;
-  font-size: 17.5px;
-  margin-left: 15px;
-`
+// const FancyRandomness = styled.p`
+//   font-family: "La Belle Aurore", cursive;
+//   color: #798694;
+//   font-size: 17.5px;
+//   margin-left: 15px;
+// `
 
 const StyledDescription = styled.div`
-  margin-top: 10px;
+  margin-top: 25px;
   width: 100%;
   max-width: 620px;
   font-size: ${theme.fontSizes.s};
@@ -61,19 +61,17 @@ const StyledDescription = styled.div`
   color: #f0f2e9;
 `
 
-const fancy = ["<h2>", "<h2/>"]
+// const fancy = ["<h2>", "<h2/>"]
 
 const Hero = ({ data }) => {
   const { frontmatter, html } = data
   return (
     <Container>
       <StyledIntro>{frontmatter.title}</StyledIntro>
-      <FancyRandomness>{fancy[0]}</FancyRandomness>
       <StyledTitle>
         {frontmatter.name}
         <span>.</span>
       </StyledTitle>
-      <FancyRandomness>{fancy[0]}</FancyRandomness>
       <StyledDescription dangerouslySetInnerHTML={{ __html: html }} />
       <StyledCTAButton href={`mailto:notchera@gmail.com`}>
         {" "}
