@@ -4,12 +4,19 @@ import styled from "styled-components"
 import { Section, mixins } from "../styles/shared-styles"
 import media from "../styles/media"
 import theme from "../styles/theme"
+import Div100vh from "react-div-100vh"
+import { generateSpace } from "../styles/shared-styles"
 
-const Wrapper = styled(Section)`
+const Wrapper = styled(Div100vh)`
   ${mixins.flexCenter};
+  margin: 0 auto;
+  ${generateSpace("padding")};
+  max-width: 900px;
+
+  ${media.tablet`padding: 10px 20px;`};
   flex-direction: column;
   align-items: flex-start;
-  min-height: 100vh;
+  height: 100vh;
 `
 
 const StyledIntro = styled.div`
@@ -44,7 +51,7 @@ const StyledDescription = styled.div`
 const Hero = ({ data }) => {
   const { frontmatter, html } = data
   return (
-    <Wrapper>
+    <Wrapper as="section">
       <StyledIntro>{frontmatter.title}</StyledIntro>
       <StyledTitle>
         {frontmatter.name}
