@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
   `}
 `
 
-export const Shoable = styled.div`
+export const Drawer = styled.div`
   ${media.phablet`
     background: ${theme.colors.darkNavyEnd};
     overflow: hidden;
@@ -91,11 +91,11 @@ class Navigation extends Component {
               onClick={this.toggleMenu} 
             />
           </Header>
-          <Shoable open={open}>
+          <Drawer open={open}>
             <div>
               <Menu />
             </div>
-          </Shoable>
+          </Drawer>
         </Wrapper>      
       )
     }

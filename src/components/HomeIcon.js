@@ -2,16 +2,14 @@ import React from "react"
 import Link from "gatsby-link"
 import Icon from "../svgs/home.svg"
 import styled from "styled-components"
-import { generateSpace } from "../styles/shared-styles"
+// import { generateSpace } from "../styles/shared-styles"
 // import { generateSpace } from '../styles/shared-styles'
 import media from "../styles/media"
 
 export const Wrapper = styled.div`
-  max-width: 18rem;
-  ${generateSpace("padding")}
+  display: none;
   ${media.phablet`
-  position: static;
-  padding: 0;
+  display: flex;
   align-self: flex-end;
 `}
 
@@ -23,9 +21,9 @@ export const Wrapper = styled.div`
   a {
     width: 1.65rem;
     ${media.tablet`
-    width: 1.95rem;
     position: fixed;
-    margin-top: -20px;
+    margin-top: -18px;
+    width: 1.95rem;
   `}
   }
   svg {
@@ -37,11 +35,9 @@ export const Wrapper = styled.div`
 
 const HomeIcon = () => (
   <Wrapper>
-    <div>
-      <Link to="/">
-        <Icon />
-      </Link>
-    </div>
+    <Link to="/">
+      <Icon />
+    </Link>
   </Wrapper>
 )
 

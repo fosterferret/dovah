@@ -1,14 +1,11 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect, useRef } from "react"
+import React from "react"
 import styled from "styled-components"
 import { mixins } from "../styles/shared-styles"
 import CustomSection from "./CustomSection"
 import media from "../styles/media"
 import theme from "../styles/theme"
 import { generateSpace } from "../styles/shared-styles"
-import Typewriter from "typewriter-effect"
-import GraphemeSplitter from "grapheme-splitter"
-import anime from "animejs"
 
 const Container = styled(CustomSection)`
   ${mixins.flexCenter};
@@ -26,7 +23,6 @@ const StyledCTAButton = styled.a`
   ${mixins.bigButton};
   align-self: center;
   margin-top: 50px;
-  width: 8.35em;
 `
 
 const StyledIntro = styled.div`
@@ -68,35 +64,7 @@ const StyledDescription = styled.div`
 // const fancy = ["<h2>", "<h2/>"]
 
 const Hero = ({ data }) => {
-
   const { frontmatter, html } = data
-
-  const typewriter = [
-    `Let's Talk`,
-    `Say Hello`,
-    `Reach Out`,
-  ]
-
-  const dotAnimation = useRef()
-  function stringSplitter(string) {
-    const splitter = new GraphemeSplitter()
-    return splitter.splitGraphemes(string)
-  }
-
-  useEffect(() => {
-    const dotEl = dotAnimation.current
-      anime({
-        targets: dotEl,
-        endDelay: 800,
-        easing: "easeInOutQuad",
-        direction: "alternate",
-        background: "#ddd",
-        loop: true,
-      })
-
-    return () => anime.remove(dotEl)
-  })
-
   return (
     <Container>
       <StyledIntro>{frontmatter.title}</StyledIntro>
@@ -107,15 +75,7 @@ const Hero = ({ data }) => {
       <StyledDescription dangerouslySetInnerHTML={{ __html: html }} />
       <StyledCTAButton href={`mailto:notchera@gmail.com`}>
         {" "}
-        <Typewriter
-              options={{
-                strings: typewriter,
-                autoStart: true,
-                loop: true,
-                delay: 55,
-                stringSplitter,
-              }}
-            />
+        {frontmatter.cta}
       </StyledCTAButton>
     </Container>
   )
