@@ -1,18 +1,18 @@
 /* eslint-disable react/prop-types */
 import React from "react"
 import styled from "styled-components"
-import { Section, mixins } from "../styles/shared-styles"
+import { mixins } from "../styles/shared-styles"
+import CustomSection from './CustomSection'
 import media from "../styles/media"
 import theme from "../styles/theme"
-import Div100vh from "react-div-100vh"
 import { generateSpace } from "../styles/shared-styles"
 
-const Wrapper = styled(Div100vh)`
+
+const Wrapper = styled(CustomSection)`
   ${mixins.flexCenter};
   margin: 0 auto;
   ${generateSpace("padding")};
   max-width: 900px;
-
   ${media.tablet`padding: 10px 20px;`};
   flex-direction: column;
   align-items: flex-start;
@@ -51,7 +51,7 @@ const StyledDescription = styled.div`
 const Hero = ({ data }) => {
   const { frontmatter, html } = data
   return (
-    <Wrapper >
+    <Wrapper style={{}} >
       <StyledIntro>{frontmatter.title}</StyledIntro>
       <StyledTitle>
         {frontmatter.name}

@@ -11,7 +11,7 @@ ${props => props.theme.preload.map(url => '@import url("' + url + '");')}
   ${LocalFonts}
   * {
     box-sizing: border-box;
-    line-height: 1.3em;
+    line-height: 1.5em;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -40,6 +40,7 @@ ${props => props.theme.preload.map(url => '@import url("' + url + '");')}
     width: 100%;
     color: #fff;
     font-family: ${fonts.FuturaPT};
+    line-height: 1.4em;
     font-size: ${fontSizes.xl} 
     ${media.tablet`font-size: ${fontSizes.md};`}
   }
