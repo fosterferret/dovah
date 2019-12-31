@@ -51,7 +51,7 @@ const StyledDescription = styled.div`
 const Hero = ({ data }) => {
   const { frontmatter, html } = data
   return (
-    <Wrapper as="section">
+    <Wrapper >
       <StyledIntro>{frontmatter.title}</StyledIntro>
       <StyledTitle>
         {frontmatter.name}
