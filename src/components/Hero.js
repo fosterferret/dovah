@@ -16,7 +16,7 @@ const Container = styled(CustomSection)`
   flex-direction: column;
   align-items: flex-start;
   height: 100vh;
-  ${media.tablet`padding: 3rem;`};
+  ${media.tablet`padding: 2.5rem;`};
 `
 
 const StyledCTAButton = styled.a`
