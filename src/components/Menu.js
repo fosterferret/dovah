@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled, { css } from 'styled-components'
-// import media from "../styles/media"
+import media from "../styles/media"
 import theme from "../styles/theme"
 import { generateSpace } from '../styles/shared-styles'
 
@@ -39,7 +39,7 @@ const NavWrapper = styled.nav`
       }
 
       &:hover {
-        color: #fff;
+        color: ${theme.colors.darkYellow};
         
         &::before {
           transform: translate(0, -50%);
@@ -48,7 +48,10 @@ const NavWrapper = styled.nav`
       }
     }
   }
-  
+  ${media.phablet`
+  position: static;
+  padding: 0;
+`}
 `
 
 export const Nav = styled.ul`
@@ -83,7 +86,7 @@ export const NavItem = styled.li`
         }
       `
       : css`
-        color: ${theme.colors.darkYellow};
+        color: ${theme.colors.darkGrey};
       `}
   }
 `

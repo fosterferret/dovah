@@ -28,7 +28,7 @@ const StyledIntro = styled.div`
   color: ${theme.colors.darkYellow};
   font-size: ${theme.fontSizes.xl};
   font-weight: normal;
-  margin: 0 0 10px 0px;
+  margin: 0 0 8px 0px;
 `
 
 const StyledTitle = styled.h2`

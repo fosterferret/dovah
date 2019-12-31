@@ -20,7 +20,7 @@ export const ToggleWrapper = styled.div`
   }
 
   ${props =>
-    props.isOpen
+    props.open
       ? css`
           transform: rotate(90deg);
           align-items: center;

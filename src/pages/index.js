@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react"
 // import { Link } from "gatsby"
 import useHero from "../hooks/use-hero"
@@ -7,11 +8,11 @@ import Logo from "../components/Logo.js"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 
-const IndexPage = () => {
+const IndexPage = ({location}) => {
   const hero = useHero()
   console.log(hero)
   return (
-    <Layout>
+    <Layout location={location}>
       <Logo/>
       <Hero data={hero} />
     </Layout>

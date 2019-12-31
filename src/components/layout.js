@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import GlobalStyle from "../styles/global"
 import { ThemeProvider } from "styled-components"
 import theme from "../styles/theme"
-import Navigation from "../components/Nav"
+import Navigation from "../components/Navigation"
 
 const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
