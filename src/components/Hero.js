@@ -2,13 +2,12 @@
 import React from "react"
 import styled from "styled-components"
 import { mixins } from "../styles/shared-styles"
-import CustomSection from './CustomSection'
+import CustomSection from "./CustomSection"
 import media from "../styles/media"
 import theme from "../styles/theme"
 import { generateSpace } from "../styles/shared-styles"
 
-
-const Wrapper = styled(CustomSection)`
+const Container = styled(CustomSection)`
   ${mixins.flexCenter};
   margin: 0 auto;
   ${generateSpace("padding")};
@@ -17,6 +16,12 @@ const Wrapper = styled(CustomSection)`
   flex-direction: column;
   align-items: flex-start;
   height: 100vh;
+`
+
+const StyledCTAButton = styled.a`
+  ${mixins.bigButton};
+  align-self: center;
+  margin-top: 50px;
 `
 
 const StyledIntro = styled.div`
@@ -33,32 +38,47 @@ const StyledTitle = styled.h2`
   span {
     color: ${theme.colors.darkYellow};
   }
-  margin: 0;
+
   ${media.tablet`font-size: 35px;`};
   ${media.mobile`font-size: 28px;`};
 `
 
+const FancyRandomness = styled.p`
+  font-family: "La Belle Aurore", cursive;
+  color: #798694;
+  font-size: 17.5px;
+  margin-left: 15px
+`
+
 const StyledDescription = styled.div`
-  margin-top: 25px;
+  margin-top: 10px;
   width: 100%;
-  max-width: 600px;
+  max-width: 620px;
   font-size: ${theme.fontSizes.s};
   font-family: ${theme.fonts.FuturaPT};
   font-weight: 300;
   color: #f0f2e9;
 `
 
+const fancy = ["<h1>", "<h2/>"]
+
 const Hero = ({ data }) => {
   const { frontmatter, html } = data
   return (
-    <Wrapper style={{}} >
+    <Container>
       <StyledIntro>{frontmatter.title}</StyledIntro>
+      <FancyRandomness>{fancy[0]}</FancyRandomness>
       <StyledTitle>
         {frontmatter.name}
         <span>.</span>
       </StyledTitle>
+      <FancyRandomness>{fancy[0]}</FancyRandomness>
       <StyledDescription dangerouslySetInnerHTML={{ __html: html }} />
-    </Wrapper>
+      <StyledCTAButton href={`mailto:notchera@gmail.com`}>
+        {" "}
+        {frontmatter.cta}
+      </StyledCTAButton>
+    </Container>
   )
 }
 

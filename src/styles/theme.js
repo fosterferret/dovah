@@ -9,8 +9,10 @@ export default {
     bookYellow: "#E5E5E5",
     darkGrey: "#798694",
     textNavy: "#1D344E",
-    titleWhite: "#E5E5E5"
+    titleWhite: "#E5E5E5",
+    hoverYellow: "#EAD87B"
   },
+  borderRadius: '3px',
   fonts: {
     FuturaPT:
       "Futura PT, Montserrat, Roboto, -apple-system, system-ui, BlinkMacSystemFont",
@@ -21,8 +23,9 @@ export default {
   },
 
   fontSizes: {
-    xs: "12px",
-    sm: "15px",
+    xxs: "12px",
+    xs: "14px",
+    sm: "16px",
     md: "18px",
     l: "20px",
     xl: "22px",

@@ -36,6 +36,29 @@ export const mixins = {
     cursor: pointer;
   `,
 
+
+  bigButton: css`
+    color: ${colors.darkYellow};
+    background-color: transparent;
+    border: 1px solid ${colors.darkYellow};
+    border-radius: ${theme.borderRadius};
+    padding: 0.9rem 1.55rem;
+    font-size: ${fontSizes.sm};
+    font-family: ${fonts.FuturaPT};
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+      color: ${colors.hoverYellow};
+    }
+    &:after {
+      display: none !important;
+    }
+  `,
+
+
   button: css`
     color: ${colors.darkYellow};
     background-color: transparent;
