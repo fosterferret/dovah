@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
     ${media.tablet`
     width: 1.95rem;
     position: fixed;
-    margin-top: -17px;
+    margin-top: -20px;
   `}
   }
   svg {
