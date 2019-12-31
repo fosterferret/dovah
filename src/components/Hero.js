@@ -72,9 +72,9 @@ const Hero = ({ data }) => {
   const { frontmatter, html } = data
 
   const typewriter = [
-    `Talk To Me`,
     `Let's Talk`,
-    `Say Hello`
+    `Say Hello`,
+    `Reach Out`,
   ]
 
   const dotAnimation = useRef()
