@@ -16,7 +16,7 @@ const Container = styled(CustomSection)`
   flex-direction: column;
   align-items: flex-start;
   height: 100vh;
-  ${media.tablet`padding: 2.3rem;`};
+  ${media.tablet`padding: 2.2rem;`};
 `
 
 const StyledCTAButton = styled.a`
@@ -35,13 +35,13 @@ const StyledIntro = styled.div`
 const StyledTitle = styled.h2`
   font-size: 45px;
   color: ${theme.colors.titleWhite};
-  line-height: 1.2;
+  line-height: 1.1;
   span {
     color: ${theme.colors.darkYellow};
   }
 
   ${media.tablet`font-size: 35px;`};
-  ${media.mobile`font-size: 28px;`};
+  ${media.mobile`font-size: 30px;`};
 `
 
 // const FancyRandomness = styled.p`
@@ -54,7 +54,7 @@ const StyledTitle = styled.h2`
 const StyledDescription = styled.div`
   margin-top: 25px;
   width: 100%;
-  max-width: 620px;
+  max-width: 650px;
   font-size: ${theme.fontSizes.s};
   font-family: ${theme.fonts.FuturaPT};
   font-weight: 300;
