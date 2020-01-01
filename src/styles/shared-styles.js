@@ -36,14 +36,13 @@ export const mixins = {
     cursor: pointer;
   `,
 
-
   bigButton: css`
     color: ${colors.darkYellow};
     background-color: transparent;
     border: 1px solid ${colors.darkYellow};
     border-radius: ${theme.borderRadius};
-    padding: 0.95rem 1.55rem;
-    font-size: ${fontSizes.sm};
+    padding: 0.95rem 1.5rem;
+    font-size: calc(${fontSizes.sm} - 0.5px);
     font-family: ${fonts.FuturaPT};
     line-height: 1;
     text-decoration: none;
@@ -57,7 +56,6 @@ export const mixins = {
       display: none !important;
     }
   `,
-
 
   button: css`
     color: ${colors.darkYellow};
@@ -96,7 +94,6 @@ export const mixins = {
   `,
 }
 
-
 export const spaces = {
   lvl1: "5rem",
   lvl2: "4rem",
@@ -125,7 +122,7 @@ export const generateSpace = padding =>
 
 export const Section = styled.section`
   margin: 0 auto;
- ${generateSpace('padding')};
+  ${generateSpace("padding")};
   max-width: 900px;
 
   ${media.tablet`padding: 10px 20px;`};
@@ -136,4 +133,3 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   min-height: 100vh;
 `
-

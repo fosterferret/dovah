@@ -21,7 +21,7 @@ const Container = styled(CustomSection)`
 
 const StyledCTAButton = styled.a`
   ${mixins.bigButton};
-  align-self: center;
+  // align-self: center;
   margin-top: 50px;
   font-family: ${theme.fonts.Inconsolata};
 `
