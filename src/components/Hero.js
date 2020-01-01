@@ -61,6 +61,11 @@ const StyledDescription = styled.div`
   font-weight: 400;
   color: #ADBBCA;
   ${media.mobile`${theme.fontSizes.sm}`};
+  del {
+    text-decoration: line-through;
+    text-decoration-color: ${theme.colors.darkYellow} ;
+    text-decoration-thickness: auto;
+  }
 `
 
 // const fancy = ["<h2>", "<h2/>"]
