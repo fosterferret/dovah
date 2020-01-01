@@ -23,14 +23,15 @@ const StyledCTAButton = styled.a`
   ${mixins.bigButton};
   align-self: center;
   margin-top: 50px;
-  font-family: ${theme.fonts.Inconsolata}
+  font-family: ${theme.fonts.Inconsolata};
 `
 
 const StyledIntro = styled.div`
   color: ${theme.colors.darkYellow};
-  font-size: ${theme.fontSizes.xl};
+  font-size: ${theme.fontSizes.md};
   font-weight: normal;
   margin: 0 0 18px 0px;
+  font-family: 'Roboto Mono'
 `
 
 const StyledTitle = styled.h2`
@@ -41,8 +42,8 @@ const StyledTitle = styled.h2`
     color: ${theme.colors.darkYellow};
   }
 
-  ${media.tablet`font-size: 38px !important;`};
-  ${media.mobile`font-size: 32px !important;`};
+  ${media.tablet`font-size: 37px !important;`};
+  ${media.mobile`font-size: 31px !important;`};
 `
 
 // const FancyRandomness = styled.p`
@@ -77,7 +78,6 @@ const Hero = ({ data }) => {
       <StyledIntro>{frontmatter.title}</StyledIntro>
       <StyledTitle>
         {frontmatter.name}
-        <span>.</span>
       </StyledTitle>
       <StyledDescription dangerouslySetInnerHTML={{ __html: html }} />
       <StyledCTAButton href={`mailto:notchera@gmail.com`}>

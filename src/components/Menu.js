@@ -67,7 +67,7 @@ export const NavItem = styled.li`
   }
 
   a {
-    font-size: .9rem;
+    font-size: .8rem;
     font-family: ${theme.fonts.Inconsolata};
     pointer-events: all;
     transition: color .1s ease;

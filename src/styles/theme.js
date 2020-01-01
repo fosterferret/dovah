@@ -1,24 +1,26 @@
 export default {
-  preload:
-    ["https://fonts.googleapis.com/css?family=Inconsolata|La+Belle+Aurore&display=swap"],
+  preload: [
+    "https://fonts.googleapis.com/css?family=Inconsolata|La+Belle+Aurore&display=swap",
+    "https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap",
+  ],
   colors: {
     darkNavyStart: "#1C3451",
     darkNavyEnd: "#16283C",
     lightYellow: "#FCE257",
-    darkYellow: "#E7CC3F", 
+    darkYellow: "#E7CC3F",
     bookYellow: "#E5E5E5",
     darkGrey: "#798694",
     textNavy: "#1D344E",
     titleWhite: "#E5E5E5",
-    hoverYellow: "#EAD87B"
+    hoverYellow: "#EAD87B",
   },
-  borderRadius: '3px',
+  borderRadius: "3px",
   fonts: {
     FuturaPT:
       "Futura PT, Montserrat, Roboto, -apple-system, system-ui, BlinkMacSystemFont",
     FuturaPTLight:
       "Futura PT Light, Montserrat, Roboto, -apple-system, system-ui, BlinkMacSystemFont",
-    Inconsolata: "Inconsolata, Roboto Mono, Monaco, monospace",
+    Inconsolata: "Roboto Mono, Inconsolata, Monaco, monospace",
     LaBelle: "La Belle Aurore, cursive",
   },
 

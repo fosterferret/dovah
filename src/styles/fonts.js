@@ -169,4 +169,14 @@ export default css`
     font-weight: normal;
     font-style: italic;
   }
+
+
+@font-face {
+  font-family: 'Kiona';
+  src: url('Kiona-Regular.woff2') format('woff2'),
+      url('Kiona-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 `
