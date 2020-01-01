@@ -56,9 +56,8 @@ const StyledDescription = styled.div`
   margin-top: 18px;
   width: 100%;
   max-width: 650px;
-  font-size: ${theme.fontSizes.s};
   font-family: ${theme.fonts.FuturaPT};
-  font-weight: 400;
+  font-weight: normal;
   color: #ADBBCA;
   ${media.mobile`${theme.fontSizes.sm}`};
   del {
@@ -66,6 +65,7 @@ const StyledDescription = styled.div`
     text-decoration-color: ${theme.colors.darkYellow} ;
     text-decoration-thickness: auto;
   }
+  p {${media.phablet`line-height: 1.625em !important;`}};
 `
 
 // const fancy = ["<h2>", "<h2/>"]

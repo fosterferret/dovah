@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components"
 import theme from "./theme"
 import media from "./media"
 import reset from "styled-reset"
-import LocalFonts from "./fonts"
+import LocalFonts from "../fonts/fonts"
 const { colors, fontSizes, fonts } = theme
 
 export default createGlobalStyle`
@@ -40,7 +40,7 @@ ${props => props.theme.preload.map(url => '@import url("' + url + '");')}
     width: 100%;
     color: #fff;
     font-family: ${fonts.FuturaPT};
-    line-height: 1.4em;
+    line-height: 1.5em;
     font-size: ${fontSizes.xl} 
     ${media.tablet`font-size: ${fontSizes.md};`}
   }
