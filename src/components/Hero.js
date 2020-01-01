@@ -60,6 +60,7 @@ const StyledDescription = styled.div`
   font-family: ${theme.fonts.FuturaPT};
   font-weight: 300;
   color: #f0f2e9;
+  ${media.mobile`${theme.fontSizes.xs}`};
 `
 
 // const fancy = ["<h2>", "<h2/>"]
