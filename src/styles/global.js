@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components"
 import theme from "./theme"
 import media from "./media"
 import reset from "styled-reset"
-import LocalFonts from "../fonts/fonts"
+import LocalFonts from "./fonts"
 const { colors, fontSizes, fonts } = theme
 
 export default createGlobalStyle`
