@@ -58,8 +58,8 @@ const StyledDescription = styled.div`
   max-width: 650px;
   font-size: ${theme.fontSizes.s};
   font-family: ${theme.fonts.FuturaPT};
-  font-weight: 300;
-  color: #f0f2e9;
+  font-weight: 400;
+  color: #ADBBCA;
   ${media.mobile`${theme.fontSizes.xs}`};
 `
 
