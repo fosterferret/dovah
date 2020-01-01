@@ -13,8 +13,8 @@ ${props => props.theme.preload.map(url => '@import url("' + url + '");')}
     box-sizing: border-box;
     line-height: 1.5em;
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
     font-kerning: auto;
   }
 

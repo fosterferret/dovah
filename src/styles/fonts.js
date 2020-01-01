@@ -13,17 +13,9 @@ export default css`
 
   @font-face {
     font-family: "Futura PT";
-    src: url("FuturaPT-HeavyObl.woff2") format("woff2"),
-      url("FuturaPT-HeavyObl.woff") format("woff");
-    font-weight: 400;
-    font-style: italic;
-  }
-
-  @font-face {
-    font-family: "Futura PT";
     src: url("FuturaPT-Light.woff2") format("woff2"),
       url("FuturaPT-Light.woff") format("woff");
-    font-weight: 350;
+    font-weight: 400;
     font-style: normal;
   }
 
@@ -37,17 +29,9 @@ export default css`
 
   @font-face {
     font-family: "Futura PT";
-    src: url("FuturaPT-BoldObl.woff2") format("woff2"),
-      url("FuturaPT-BoldObl.woff") format("woff");
-    font-weight: bold;
-    font-style: italic;
-  }
-
-  @font-face {
-    font-family: "Futura PT";
     src: url("FuturaPT-Book.woff2") format("woff2"),
       url("FuturaPT-Book.woff") format("woff");
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
   }
 
@@ -67,14 +51,7 @@ export default css`
     font-style: italic;
   }
 
-  @font-face {
-    font-family: "Futura PT";
-    src: url("FuturaPT-Demi.woff2") format("woff2"),
-      url("FuturaPT-Demi.woff") format("woff");
-    font-weight: 600;
-    font-style: normal;
-  }
-
+ 
   @font-face {
     font-family: "Futura PT";
     src: url("FuturaPT-LightObl.woff2") format("woff2"),
