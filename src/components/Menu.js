@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import Link from 'gatsby-link'
 import styled, { css } from 'styled-components'
@@ -17,7 +18,7 @@ const NavWrapper = styled.nav`
   justify-content: space-between;
   pointer-events: none;
   ${generateSpace('padding')};
-  counter-reset: li;
+  ${props => !props.open ? `counter-reset: li;` : ''}
   
   ul:last-child li {
     text-align: right;
@@ -26,13 +27,7 @@ const NavWrapper = styled.nav`
       transition: color .4s ease;
       will-change: color;
       position: relative;
-      
-      &::before {
-        counter-increment: li;
-        content: counter(li, decimal-leading-zero)'. ';
-        will-change: transform, opacity;
-      }
-
+    
       &:not(.active)::before {
         opacity: 1;
         transform: translate(-1rem, -50%);
@@ -48,7 +43,7 @@ const NavWrapper = styled.nav`
       }
     }
   }
-  ${media.phablet`
+  ${media.tablet`
   position: static;
   padding: 0;
 `}
@@ -64,7 +59,7 @@ export const Nav = styled.ul`
 
 export const NavItem = styled.li`
   list-style: none;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   line-height: 1em;
   
   &:last-child {
@@ -105,25 +100,34 @@ export const NavLink = styled(Link).attrs({
 `
 
 
-const Menu = () =>
-  <NavWrapper>
-    <Nav>
+const Menu = ({open}) =>
+  <NavWrapper open={open}>
+    <Nav open={open}>
       <NavItem>
         <a href="https://twitter.com/auxinom" rel="noopener noreferrer" target="_blank">Twitter</a>
       </NavItem>
       <NavItem>
         <a href="https://github.com/fosterferret" rel="noopener noreferrer" target="_blank">Github</a>
       </NavItem>
+      <NavItem>
+        <a href="https://github.com/fosterferret" rel="noopener noreferrer" target="_blank">Medium</a>
+      </NavItem>
+      <NavItem>
+        <a href="https://github.com/fosterferret" rel="noopener noreferrer" target="_blank">Linkedin</a>
+      </NavItem>
     </Nav>
     <Nav>
-      <NavItem>
-        <NavLink to='/'>Index</NavLink>
+      <NavItem open={open}>
+        <NavLink open={open} to='/'>Home</NavLink>
       </NavItem>
       <NavItem>
         <NavLink to='/works'>Works</NavLink>
       </NavItem>
       <NavItem>
         <NavLink to='/about'>About</NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink to='/lists'>Lists</NavLink>
       </NavItem>
     </Nav>
   </NavWrapper>

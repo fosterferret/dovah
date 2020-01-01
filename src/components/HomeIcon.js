@@ -8,7 +8,7 @@ import media from "../styles/media"
 
 export const Wrapper = styled.div`
   display: none;
-  ${media.phablet`
+  ${media.tablet`
   display: flex;
   align-self: flex-end;
 

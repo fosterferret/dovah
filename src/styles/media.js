@@ -3,9 +3,9 @@ import { css } from "styled-components"
 const screenSizesInPx = {
   large: 1280,
   desktop: 1024,
-  tablet: 760,
-  phablet: 500,
-  mobile: 376,
+  tablet: 840,
+  phablet: 540,
+  mobile: 380,
   tiny: 330,
 }
 
@@ -21,4 +21,4 @@ const media = () => {
   }, {})
 }
 
-export default media();
+export default media()

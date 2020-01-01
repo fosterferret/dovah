@@ -30,11 +30,11 @@ export const Wrapper = styled.div`
           span {
             &:nth-child(1),
             &:nth-child(3) {
-              width: 60%;
+              width: 100%;
             }
 
             &:nth-child(2) {
-              width: 100%;
+              width: 60%;
             }
           }
         `
@@ -51,12 +51,12 @@ export const Wrapper = styled.div`
             }
 
             &:nth-child(3) {
-              width: 80%;
+              width: 100%;
             }
           }
         `}
 
-  ${media.phablet`
+  ${media.tablet`
     display: flex;
   `}
 `
