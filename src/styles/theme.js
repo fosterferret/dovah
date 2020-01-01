@@ -25,7 +25,7 @@ export default {
   fontSizes: {
     xxs: "12px",
     xs: "13px",
-    sm: "15px",
+    sm: "15.5px",
     md: "17px",
     l: "20px",
     xl: "22px",

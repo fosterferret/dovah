@@ -23,6 +23,7 @@ const StyledCTAButton = styled.a`
   ${mixins.bigButton};
   align-self: center;
   margin-top: 50px;
+  font-family: ${theme.fonts.Inconsolata}
 `
 
 const StyledIntro = styled.div`

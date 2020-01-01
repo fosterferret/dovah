@@ -42,7 +42,7 @@ export const mixins = {
     background-color: transparent;
     border: 1px solid ${colors.darkYellow};
     border-radius: ${theme.borderRadius};
-    padding: 0.9rem 1.55rem;
+    padding: 0.95rem 1.55rem;
     font-size: ${fontSizes.sm};
     font-family: ${fonts.FuturaPT};
     line-height: 1;
