@@ -110,7 +110,7 @@ const Menu = ({open}) =>
         <a href="https://github.com/fosterferret" rel="noopener noreferrer" target="_blank">Github</a>
       </NavItem>
       <NavItem>
-        <a href="https://github.com/fosterferret" rel="noopener noreferrer" target="_blank">Medium</a>
+        <a href="https://medium.com/@AuxiNom" rel="noopener noreferrer" target="_blank">Medium</a>
       </NavItem>
       <NavItem>
         <a href="https://github.com/fosterferret" rel="noopener noreferrer" target="_blank">Linkedin</a>
