@@ -1,7 +1,7 @@
 ---
 title: 'Hello, my name is'
 el1: <h2>
-name: 'FRANCIS BULUS.'
+name: 'Francis Bulus.'
 el2: <h2/>
 cta: 'Get In Touch'
 ---

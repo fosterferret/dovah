@@ -48,7 +48,7 @@ ${props => props.theme.preload.map(url => '@import url("' + url + '");')}
   h1, h2, h3, h4, h5, h6 {
     font-weight: 600 !important;
     line-height: inherit;
-    font-family: ${fonts.FuturaPT};
+    font-family: ${fonts.BCFalster};
   }
 
   a {

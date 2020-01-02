@@ -1,5 +1,6 @@
 import { css } from "styled-components"
 import "../fonts/fonts.css"
+import "../fonts/BCFalster/stylesheet.css"
 
 export default css`
   @font-face {
@@ -178,5 +179,71 @@ export default css`
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'BC Falster Grotesk';
+  src: url('BCFalsterGrotesk-MediumItalic.woff2') format('woff2'),
+      url('BCFalsterGrotesk-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'BC Falster Grotesk';
+  src: url('BCFalsterGrotesk-Bold.woff2') format('woff2'),
+      url('BCFalsterGrotesk-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BC Falster Grotesk';
+  src: url('BCFalsterGrotesk-Italic.woff2') format('woff2'),
+      url('BCFalsterGrotesk-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'BC Falster Grotesk';
+  src: url('BCFalsterGrotesk-Light.woff2') format('woff2'),
+      url('BCFalsterGrotesk-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BC Falster Grotesk';
+  src: url('BCFalsterGrotesk-Medium.woff2') format('woff2'),
+      url('BCFalsterGrotesk-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BC Falster Grotesk';
+  src: url('BCFalsterGrotesk-LightItalic.woff2') format('woff2'),
+      url('BCFalsterGrotesk-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'BC Falster Grotesk';
+  src: url('BCFalsterGrotesk-BoldItalic.woff2') format('woff2'),
+      url('BCFalsterGrotesk-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'BC Falster Grotesk';
+  src: url('BCFalsterGrotesk-Regular.woff2') format('woff2'),
+      url('BCFalsterGrotesk-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 `

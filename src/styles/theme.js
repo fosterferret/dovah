@@ -22,6 +22,7 @@ export default {
       "Futura PT Light, Montserrat, Roboto, -apple-system, system-ui, BlinkMacSystemFont",
     Inconsolata: "Roboto Mono, Inconsolata, Monaco, monospace",
     LaBelle: "La Belle Aurore, cursive",
+    BCFalster: "BC Falster Grotesk"
   },
 
   fontSizes: {
