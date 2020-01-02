@@ -95,7 +95,7 @@ export const mixins = {
 }
 
 export const spaces = {
-  lvl1: "5rem",
+  lvl1: "4.5rem",
   lvl2: "4rem",
   lvl3: "3rem",
   lvl4: "2rem",

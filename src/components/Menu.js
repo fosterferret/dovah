@@ -60,7 +60,7 @@ export const Nav = styled.ul`
 export const NavItem = styled.li`
   list-style: none;
   padding: 0.5rem 0;
-  line-height: 1em;
+  line-height: 0.85em;
   
   &:last-child {
     padding-bottom: 0;

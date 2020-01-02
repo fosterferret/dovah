@@ -4,21 +4,21 @@ import styled, { css } from "styled-components"
 import { generateSpace } from "../styles/shared-styles"
 import theme from "../styles/theme"
 
-export const Wrapper = styled.footer`
+const Wrapper = styled.footer`
   width: 100%;
   position: fixed;
-  top:35%;
+  top: 35%;
   ${media.tablet`
     position: static;
     padding-top: 1.5rem;
   `}
 `
 
-export const Sider = styled.a`
+const Sider = styled.a`
   position: absolute;
   font-family: ${theme.fonts.Inconsolata};
   color: ${theme.colors.darkGrey};
-  font-size: 0.90rem;
+  font-size: 0.9rem;
   line-height: 1em;
   ${props =>
     props.orientation === "left"
@@ -46,7 +46,13 @@ export const Sider = styled.a`
 
 const Footer = () => (
   <Wrapper>
-    <Sider orientation="left" href={`mailto:notchera@gmail.com`}>notchera@gmail.com</Sider>
+    <Sider
+      orientation="left"
+      className="double-underline"
+      href={`mailto:notchera@gmail.com`}
+    >
+      notchera@gmail.com
+    </Sider>
     <Sider orientation="right">Poach my resume?</Sider>
   </Wrapper>
 )
