@@ -9,7 +9,7 @@ export default {
     lightYellow: "#FCE257",
     darkYellow: "#FCDD3B",
     bookYellow: "#E5E5E5",
-    darkGrey: "#798694",
+    darkGrey: "#828D99",
     textNavy: "#1D344E",
     titleWhite: "#E5E5E5",
     hoverYellow: "#EAD87B",

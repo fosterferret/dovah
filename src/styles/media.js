@@ -2,8 +2,8 @@ import { css } from "styled-components"
 
 const screenSizesInPx = {
   large: 1280,
-  desktop: 1024,
-  tablet: 840,
+  desktop: 1072,
+  tablet: 890,
   phablet: 540,
   mobile: 380,
   tiny: 330,
