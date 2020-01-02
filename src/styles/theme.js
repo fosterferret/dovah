@@ -7,7 +7,7 @@ export default {
     darkNavyStart: "#1C3451",
     darkNavyEnd: "#16283C",
     lightYellow: "#FCE257",
-    darkYellow: "#E7CC3F",
+    darkYellow: "#FCDD3B",
     bookYellow: "#E5E5E5",
     darkGrey: "#798694",
     textNavy: "#1D344E",

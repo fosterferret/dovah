@@ -121,10 +121,10 @@ const Menu = ({open}) =>
         <NavLink open={open} to='/'>Home</NavLink>
       </NavItem>
       <NavItem>
-        <NavLink to='/works'>Works</NavLink>
+        <NavLink to='/works'>Work</NavLink>
       </NavItem>
       <NavItem>
-        <NavLink to='/about'>About</NavLink>
+        <NavLink to='/about'>Profile</NavLink>
       </NavItem>
       <NavItem>
         <NavLink to='/lists'>Lists</NavLink>
