@@ -34,13 +34,19 @@ const Sider = styled.a`
         `}
 
   ${media.tablet`
-  display: block;
+    display: flex;
+    flex-direction: column;
     position: static;
     transform: rotate(0) translateX(0);
     transform-origin: 0;
     padding: .5rem 0 0;
     text-align: center;
     font-size: .8rem;
+    // color:white;
+
+    // &:nth-of-type(1) {
+    //   color: ${theme.colors.darkYellow}
+    // }
   `}
 `
 
@@ -53,7 +59,7 @@ const Footer = () => (
     >
       notchera@gmail.com
     </Sider>
-    <Sider orientation="right">Poach my resume?</Sider>
+    <Sider orientation="right">Download my resumé</Sider>
   </Wrapper>
 )
 

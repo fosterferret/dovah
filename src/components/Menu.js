@@ -78,10 +78,14 @@ export const NavItem = styled.li`
         
         &:hover::before {
           display: none !important;
+          color: #fff;
         }
       `
       : css`
         color: ${theme.colors.darkGrey};
+        &:hover {
+          color: white;
+        }
       `}
   }
 `
