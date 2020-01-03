@@ -19,6 +19,14 @@ import "../fonts/FuturaPT-Obl.woff2"
 export default css`
   @font-face {
     font-family: "Futura PT";
+    src: url("FuturaPT-Book.woff2") format("woff2"),
+      url("FuturaPT-Book.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Futura PT";
     src: url("FuturaPT-HeavyObl.woff2") format("woff2"),
       url("FuturaPT-HeavyObl.woff") format("woff");
     font-weight: 900;
@@ -54,14 +62,6 @@ export default css`
     src: url("FuturaPTCond-ExtraBold.woff2") format("woff2"),
       url("FuturaPTCond-ExtraBold.woff") format("woff");
     font-weight: 800;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Futura PT";
-    src: url("FuturaPT-Book.woff2") format("woff2"),
-      url("FuturaPT-Book.woff") format("woff");
-    font-weight: normal;
     font-style: normal;
   }
 
