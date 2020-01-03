@@ -1,5 +1,20 @@
 import { css } from "styled-components"
-import "../fonts/fonts.css"
+import "../fonts/FuturaPT-Light.woff"
+import "../fonts/FuturaPT-Light.woff2"
+import "../fonts/FuturaPT-Book.woff"
+import "../fonts/FuturaPT-Book.woff2"
+import "../fonts/FuturaPT-Medium.woff"
+import "../fonts/FuturaPT-Medium.woff2"
+import "../fonts/FuturaPT-Bold.woff"
+import "../fonts/FuturaPT-Bold.woff2"
+import "../fonts/FuturaPT-ExtraBold.woff"
+import "../fonts/FuturaPT-ExtraBold.woff2"
+import "../fonts/FuturaPT-Heavy.woff"
+import "../fonts/FuturaPT-Heavy.woff2"
+import "../fonts/FuturaPT-Demi.woff"
+import "../fonts/FuturaPT-Demi.woff2"
+import "../fonts/FuturaPT-Obl.woff"
+import "../fonts/FuturaPT-Obl.woff2"
 
 export default css`
   @font-face {
@@ -170,13 +185,11 @@ export default css`
     font-style: italic;
   }
 
-
-@font-face {
-  font-family: 'Kiona';
-  src: url('Kiona-Regular.woff2') format('woff2'),
-      url('Kiona-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
+  @font-face {
+    font-family: "Kiona";
+    src: url("Kiona-Regular.woff2") format("woff2"),
+      url("Kiona-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
 `
