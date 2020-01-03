@@ -6,9 +6,9 @@ import LocalFonts from "./fonts"
 const { colors, fontSizes, fonts } = theme
 
 export default createGlobalStyle`
-${LocalFonts}
 ${props => props.theme.preload.map(url => '@import url("' + url + '");')}
   ${reset}
+  ${LocalFonts}
   * {
     box-sizing: border-box;
     line-height: 1.5em;

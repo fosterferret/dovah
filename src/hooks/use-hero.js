@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-const useHero = () => {
+const Hero = () => {
   const data = useStaticQuery(graphql`
     query  {
       allMarkdownRemark (filter: { fileAbsolutePath: { regex: "/hero/" } }) {
@@ -23,4 +23,4 @@ const useHero = () => {
   return data.allMarkdownRemark.edges[0].node
 }
 
-export default useHero
+export default Hero

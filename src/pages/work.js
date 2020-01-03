@@ -1,17 +1,19 @@
 /* eslint-disable react/prop-types */
 import React from "react"
-import { Link } from "gatsby"
-
+// import { Link } from "gatsby"
+import Projects from "../components/Projects"
+import useProjects from "../hooks/use-projects"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+// import SEO from "../components/seo"
 
-const SecondPage = ({ location }) => (
-  <Layout location={location}>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
+const SecondPage = ({ location }) => {
+  const projects = useProjects()
+  console.log(projects)
+  return (
+    <Layout location={location}>
+      <Projects projects={projects} />
+    </Layout>
+  )
+}
 
 export default SecondPage
