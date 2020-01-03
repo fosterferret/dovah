@@ -84,10 +84,10 @@ class Navigation extends Component {
     window.addEventListener("resize", this.updateState)
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prev) {
     const { location } = this.props
 
-    if (location.pathname !== prevProps.location.pathname) {
+    if (location.pathname !== prev.location.pathname) {
       this.setState({ open: false })
     }
   }
