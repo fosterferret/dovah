@@ -11,7 +11,7 @@ const Container = styled(CustomSection)`
   ${mixins.flexCenter};
   margin: 0 auto;
   ${generateSpace("padding")};
-  max-width: 900px;
+  max-width: 800px;
   ${media.tablet`padding: 10px 20px;`};
   flex-direction: column;
   align-items: flex-start;

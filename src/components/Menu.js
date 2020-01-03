@@ -60,7 +60,7 @@ export const Nav = styled.ul`
 export const NavItem = styled.li`
   list-style: none;
   padding: 0.5rem 0;
-  line-height: 1em;
+  line-height: 0.85em;
   
   &:last-child {
     padding-bottom: 0;
@@ -78,10 +78,14 @@ export const NavItem = styled.li`
         
         &:hover::before {
           display: none !important;
+          color: #fff;
         }
       `
       : css`
         color: ${theme.colors.darkGrey};
+        &:hover {
+          color: white;
+        }
       `}
   }
 `
@@ -113,7 +117,7 @@ const Menu = ({open}) =>
         <a href="https://medium.com/@AuxiNom" rel="noopener noreferrer" target="_blank">Medium</a>
       </NavItem>
       <NavItem>
-        <a href="https://github.com/fosterferret" rel="noopener noreferrer" target="_blank">Linkedin</a>
+        <a href="https://github.com/fosterferret" rel="noopener noreferrer" target="_blank">LinkedIn</a>
       </NavItem>
     </Nav>
     <Nav>
@@ -121,10 +125,10 @@ const Menu = ({open}) =>
         <NavLink open={open} to='/'>Home</NavLink>
       </NavItem>
       <NavItem>
-        <NavLink to='/works'>Work</NavLink>
+        <NavLink to='/work'>Work</NavLink>
       </NavItem>
       <NavItem>
-        <NavLink to='/about'>Profile</NavLink>
+        <NavLink to='/profile'>Profile</NavLink>
       </NavItem>
       <NavItem>
         <NavLink to='/lists'>Lists</NavLink>
