@@ -11,14 +11,14 @@ const Head = () => (
     <link
       rel="preload"
       as="font"
-      href="src/fonts/FuturaPT-Book.woff2"
+      href="../fonts/FuturaPT-Book.woff2"
       type="font/woff2"
       crossOrigin="anonymous"
     ></link>
     <link
       rel="preload"
       as="font"
-      href="src/fonts/FuturaPT-Book.woff"
+      href="../fonts/FuturaPT-Book.woff"
       type="font/woff"
       crossOrigin="anonymous"
     ></link>
