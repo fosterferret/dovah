@@ -26,6 +26,7 @@ const Sider = styled.a`
           transform: rotate(-90deg) translateX(-50%);
           transform-origin: left;
           ${generateSpace("left")}
+          }
         `
       : css`
           transform: rotate(90deg) translateX(50%);
@@ -50,7 +51,7 @@ const Sider = styled.a`
   `}
 `
 
-const Footer = () => (
+const SideFooter = () => (
   <Wrapper>
     <Sider
       orientation="left"
@@ -63,4 +64,4 @@ const Footer = () => (
   </Wrapper>
 )
 
-export default Footer
+export default SideFooter

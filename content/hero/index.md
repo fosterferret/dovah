@@ -1,9 +1,9 @@
 ---
-title: 'Hello, my name is'
+title: "Hello, my name is"
 el1: <h2>
-name: 'FRANCIS BULUS.'
+name: "FRANCIS BULUS."
 el2: <h2/>
-cta: 'Get In Touch'
+cta: "Get In Touch"
 ---
 
-I’m a software engineer currently at Lambda School. I was trained to squash cells and study their fragments in a lab, but I now create dynamic experiences for the web in between Dr. Who episodes and ~~unhealthy~~ wholesome pasta binges.
+I’m a software developer currently at Lambda School. I was trained to squash cells and study their fragments in a lab, but I now create dynamic experiences for both facets of the web in between Dr. Who episodes and ~~unhealthy~~ wholesome pasta binges.
