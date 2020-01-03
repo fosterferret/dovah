@@ -13,6 +13,7 @@ export default {
     textNavy: "#1D344E",
     titleWhite: "#E5E5E5",
     hoverYellow: "#EAD87B",
+    cardGrey: "#2A405C"
   },
   borderRadius: "3px",
   fonts: {
