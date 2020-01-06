@@ -110,7 +110,7 @@ const Projects = ({ projects }) => {
                 <StyledDetailsCard>
                   <StyledDescription>
                     <StyledTitle>{title}</StyledTitle>
-                    <p dangerouslySetInnerHTML={{ __html: html }} />
+                    <div dangerouslySetInnerHTML={{ __html: html }} />
                     {tech && (
                       <StyledList>
                         {tech.map((tech, i) => (
