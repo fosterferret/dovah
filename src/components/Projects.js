@@ -3,8 +3,9 @@ import React from "react"
 import styled from "styled-components"
 import media from "../styles/media"
 import theme from "../styles/theme"
-// import { generateSpace } from "../styles/shared-styles"
 import Img from "gatsby-image"
+import Live from "../svgs/live.js"
+import Github from "../svgs/github.svg"
 
 const StyledContainer = styled.section`
   padding: 120px 0;
@@ -43,6 +44,31 @@ const StyledImage = styled(Img)`
   vertical-align: middle;
 `
 
+const StyledBottom = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+const StyledLinks = styled.div`
+  display: flex;
+  justify-content: space-between;
+  a {
+    padding: 0 0.5rem;
+    padding-top: 0.25rem;
+    color: red !important;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    path {
+      fill: #f5f1da;
+      &:hover {
+        fill: ${theme.colors.lightYellow};
+      }
+    }
+  }
+`
+
 const StyledDescription = styled.div`
   position: relative;
   border-radius: ${theme.borderRadius};
@@ -60,7 +86,7 @@ const StyledDescription = styled.div`
 
 const StyledDetailsCard = styled.div`
   position: relative;
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
   grid-row: 1 / -1;
   &:before {
     content: "";
@@ -81,7 +107,7 @@ const StyledImageContainer = styled.a`
   grid-row: 1 / -1;
   position: relative;
   z-index: 1;
-  background-color: ${theme.colors.darkYellow};
+  mix-blend-mode: multiply;
   border-radius: ${theme.radius + 1}px;
   ${media.tablet`height: 100%;`};
   ${media.tablet`
@@ -95,38 +121,54 @@ const StyledProject = styled.div`
   grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 `
+
+const Links = ({ github, live }) => {
+  return (
+    <StyledLinks>
+      <a href={live} rel="noopener noreferrer" target="_blank">
+        <Live width={20} height={20} />
+      </a>
+      <a href={github} rel="noopener noreferrer" target="_blank">
+        <Github width={20} height={20} />
+      </a>
+    </StyledLinks>
+  )
+}
 
 const Projects = ({ projects }) => {
   console.log(projects)
   return (
     <StyledContainer>
-        {projects &&
-          projects.map((project, index) => {
-            const { title, tech, image, html } = project
-            return (
-              <StyledProject key={index}>
-                <StyledDetailsCard>
-                  <StyledDescription>
-                    <StyledTitle>{title}</StyledTitle>
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
-                    {tech && (
+      {projects &&
+        projects.map((project, index) => {
+          const { title, tech, image, html, github, live } = project
+          return (
+            <StyledProject key={index}>
+              <StyledDetailsCard>
+                <StyledDescription>
+                  <StyledTitle>{title}</StyledTitle>
+                  <div dangerouslySetInnerHTML={{ __html: html }} />
+                  {tech && (
+                    <StyledBottom>
+                      <Links github={github} live={live} />
                       <StyledList>
                         {tech.map((tech, i) => (
                           <li key={i}>{tech}</li>
                         ))}
                       </StyledList>
-                    )}
-                  </StyledDescription>
-                </StyledDetailsCard>
+                    </StyledBottom>
+                  )}
+                </StyledDescription>
+              </StyledDetailsCard>
 
-                <StyledImageContainer fluid={image}>
-                  <StyledImage fluid={image} />
-                </StyledImageContainer>
-              </StyledProject>
-            )
-          })}
+              <StyledImageContainer fluid={image}>
+                <StyledImage fluid={image} />
+              </StyledImageContainer>
+            </StyledProject>
+          )
+        })}
     </StyledContainer>
   )
 }

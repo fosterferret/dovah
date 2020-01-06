@@ -1,7 +1,7 @@
 ---
 title: 'MineChore'
-github: 'https:/github.com/'
-live: 'https:/github.com/'
+github: 'https://github.com/fosterferret'
+live: 'https://github.com/fosterferret'
 image: 'images/minechore.png'
 tech:
   - React

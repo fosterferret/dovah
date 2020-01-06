@@ -1,7 +1,7 @@
 ---
 title: 'DadJokes'
-github: 'https:/github.com/'
-live: 'https:/github.com/'
+github: 'https://github.com/'
+live: 'https://github.com/'
 image: 'images/dad-jokes.png'
 tech:
   - React

@@ -1,7 +1,7 @@
 ---
 title: "Portfolio"
-github: "https:/github.com/"
-live: "https:/github.com/"
+github: "https://github.com/"
+live: "https://github.com/"
 image: "images/francis.png"
 tech:
   - React
