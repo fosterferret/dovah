@@ -16,7 +16,7 @@ const Projects = () => {
                   fluid(
                     maxWidth: 1050
                     quality: 100
-                    traceSVG: { color: "#EAD87B" }
+                    traceSVG: { color: "#0C1F2C" }
                   ) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
@@ -35,7 +35,7 @@ const Projects = () => {
   data.allMarkdownRemark.edges.forEach(edge =>
     result.push({
       ...edge.node.frontmatter,
-      image: edge.node.frontmatter.image.childImageSharp.fluid,
+      image: edge.node.frontmatter.image.childImageSharp.fluid ? edge.node.frontmatter.image.childImageSharp.fluid : null,
       html: edge.node.html,
     })
   )

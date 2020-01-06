@@ -1,8 +1,8 @@
 ---
-title: 'FrancisBulus v1'
-github: 'https:/github.com/'
-live: 'https:/github.com/'
-image: 'images/francis.png'
+title: "Portfolio"
+github: "https:/github.com/"
+live: "https:/github.com/"
+image: "images/francis.png"
 tech:
   - React
   - Gatsby
@@ -10,4 +10,4 @@ tech:
 feature: true
 ---
 
-The first version of my first ever portfolio page built with React on top of Gatsby, with GraphQL for internal and external queries.
+Version I of my portfolio page built with React on top of Gatsby, with GraphQL for internal and external queries.
