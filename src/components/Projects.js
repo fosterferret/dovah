@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react"
 import styled from "styled-components"
-import { mixins } from "../styles/shared-styles"
 import media from "../styles/media"
 import theme from "../styles/theme"
 // import { generateSpace } from "../styles/shared-styles"
@@ -63,7 +62,7 @@ const StyledDetailsCard = styled.div`
   position: relative;
   grid-column: 1 / 7;
   grid-row: 1 / -1;
-  &:before{
+  &:before {
     content: "";
     display: block;
     width: 20px;
@@ -78,7 +77,6 @@ const StyledDetailsCard = styled.div`
 `
 
 const StyledImageContainer = styled.a`
-  ${mixins.boxShadow};
   grid-column: 6 / -1;
   grid-row: 1 / -1;
   position: relative;
@@ -92,18 +90,12 @@ const StyledImageContainer = styled.a`
   `};
 `
 const StyledProject = styled.div`
+  width: 100%;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
   margin-bottom: 100px;
-  ${media.tablet`
-  display: flex;
-  flex-direction: column;
-  `};
-  &:last-of-type {
-    margin-bottom: 0;
-  }
 `
 
 const Projects = ({ projects }) => {
