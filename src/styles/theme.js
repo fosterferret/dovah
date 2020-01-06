@@ -5,7 +5,7 @@ export default {
   ],
   colors: {
     darkNavyStart: "#1C3451",
-    darkNavyEnd: "#16283C",
+    darkNavyEnd: "#0C1F2C",
     lightYellow: "#FCE257",
     darkYellow: "#FCDD3B",
     bookYellow: "#E5E5E5",
@@ -13,6 +13,7 @@ export default {
     textNavy: "#1D344E",
     titleWhite: "#E5E5E5",
     hoverYellow: "#EAD87B",
+    cardGrey: "#2A405C"
   },
   borderRadius: "3px",
   fonts: {
