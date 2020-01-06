@@ -30,7 +30,7 @@ const StyledList = styled.ul`
 
 const StyledTitle = styled.h2`
   padding-bottom: 0.25rem;
-  color: ${theme.colors.bookYellow};
+  color: #F5F1DA;
   // font-family: ${theme.fonts.Inconsolata};
   font-size: ${theme.fontSizes.l};
   text-align: right;
