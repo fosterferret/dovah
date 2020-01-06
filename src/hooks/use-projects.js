@@ -14,8 +14,8 @@ const Projects = () => {
               image {
                 childImageSharp {
                   fluid(
-                    maxWidth: 1050
-                    quality: 100
+                    maxWidth: 900
+                    quality: 90
                     traceSVG: { color: "#0C1F2C" }
                   ) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG

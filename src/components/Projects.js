@@ -102,7 +102,6 @@ const Projects = ({ projects }) => {
   console.log(projects)
   return (
     <StyledContainer>
-      <div>
         {projects &&
           projects.map((project, index) => {
             const { title, tech, image, html } = project
@@ -128,7 +127,6 @@ const Projects = ({ projects }) => {
               </StyledProject>
             )
           })}
-      </div>
     </StyledContainer>
   )
 }
