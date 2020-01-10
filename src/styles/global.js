@@ -38,6 +38,7 @@ ${props => props.theme.preload.map(url => '@import url("' + url + '");')}
   body {
     background-color: ${colors.darkNavyEnd};
     width: 100%;
+    overflow-x: hidden;
     color: #fff;
     font-family: ${fonts.FuturaPT};
     line-height: 1.5em;
