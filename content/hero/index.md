@@ -1,5 +1,5 @@
 ---
-title: "Hello, my name is"
+title: "HELLO, MY NAME IS"
 el1: <h2>
 name: "FRANCIS BULUS."
 el2: <h2/>
