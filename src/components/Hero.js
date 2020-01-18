@@ -48,13 +48,6 @@ const StyledTitle = styled.h2`
   ${media.mobile`font-size: 31px !important;`};
 `
 
-// const FancyRandomness = styled.p`
-//   font-family: "La Belle Aurore", cursive;
-//   color: #798694;
-//   font-size: 17.5px;
-//   margin-left: 15px;
-// `
-
 const StyledDescription = styled.div`
   margin-top: 18px;
   width: 100%;
@@ -70,8 +63,6 @@ const StyledDescription = styled.div`
   }
   p {${media.phablet`line-height: 1.625em !important;`}};
 `
-
-// const fancy = ["<h2>", "<h2/>"]
 
 const Hero = ({ data }) => {
   const { frontmatter, html } = data
