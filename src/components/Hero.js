@@ -24,6 +24,8 @@ const StyledCTAButton = styled.a`
   // align-self: center;
   margin-top: 50px;
   font-family: ${theme.fonts.Inconsolata};
+  border: 0.5px solid ${theme.colors.darkYellow};
+  border-radius: 0px;
 `
 
 const StyledIntro = styled.div`
