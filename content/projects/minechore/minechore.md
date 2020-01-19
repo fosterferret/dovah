@@ -8,6 +8,7 @@ tech:
   - Node
   - SQLite
 feature: true
+height: 450
 ---
 
 A gamified chore-tracking app built from the ground up with React for homes to effectively manage responsibilities.

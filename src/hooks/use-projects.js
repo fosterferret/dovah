@@ -11,6 +11,7 @@ const Projects = () => {
               tech
               github
               live
+              height
               image {
                 childImageSharp {
                   fluid(
