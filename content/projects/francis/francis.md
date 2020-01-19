@@ -8,7 +8,7 @@ tech:
   - Gatsby
   - GraphQL
 feature: true
-height: 450
+height: 500
 ---
 
 Version I of my portfolio page built with React on top of Gatsby, with GraphQL for internal and external queries.

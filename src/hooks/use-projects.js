@@ -3,7 +3,10 @@ import { useStaticQuery, graphql } from "gatsby"
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/projects/" } }) {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/projects/" } }
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
         edges {
           node {
             frontmatter {
@@ -36,7 +39,9 @@ const Projects = () => {
   data.allMarkdownRemark.edges.forEach(edge =>
     result.push({
       ...edge.node.frontmatter,
-      image: edge.node.frontmatter.image.childImageSharp.fluid ? edge.node.frontmatter.image.childImageSharp.fluid : null,
+      image: edge.node.frontmatter.image.childImageSharp.fluid
+        ? edge.node.frontmatter.image.childImageSharp.fluid
+        : null,
       html: edge.node.html,
     })
   )

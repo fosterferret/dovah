@@ -1,14 +1,13 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import media from "../styles/media"
 import theme from "../styles/theme"
 import Img from "gatsby-image"
-import Live from "../svgs/live.js"
-import Github from "../svgs/github.svg"
+// import Live from "../svgs/live.js"
+// import Github from "../svgs/github.svg"
 import useMediaQuery from "../hooks/use-mq"
 import useMeasure from "../hooks/use-measure"
-import ClassNames from "classnames"
 
 const StyledContainer = styled.section`
   max-width: 900px;
@@ -128,25 +127,25 @@ const StyledProject = styled.div`
   }
 `
 
-const StyledLinks = styled.div`
-  display: flex;
-  justify-content: space-between;
-  a {
-    padding: 0 0.5rem;
-    padding-top: 0.25rem;
-    color: red !important;
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-    path {
-      fill: #f5f1da;
-      &:hover {
-        fill: ${theme.colors.lightYellow};
-      }
-    }
-  }
-`
+// const StyledLinks = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   a {
+//     padding: 0 0.5rem;
+//     padding-top: 0.25rem;
+//     color: red !important;
+//     svg {
+//       width: 20px;
+//       height: 20px;
+//     }
+//     path {
+//       fill: #f5f1da;
+//       &:hover {
+//         fill: ${theme.colors.lightYellow};
+//       }
+//     }
+//   }
+// `
 const StyledTechList = styled.ul`
   position: relative;
   z-index: 2;
@@ -190,18 +189,18 @@ const StyledDescription = styled.div`
   }
 `
 
-const Links = ({ github, live }) => {
-  return (
-    <StyledLinks>
-      <a href={live} rel="noopener noreferrer" target="_blank">
-        <Live width={20} height={20} />
-      </a>
-      <a href={github} rel="noopener noreferrer" target="_blank">
-        <Github width={20} height={20} />
-      </a>
-    </StyledLinks>
-  )
-}
+// const Links = ({ github, live }) => {
+//   return (
+//     <StyledLinks>
+//       <a href={live} rel="noopener noreferrer" target="_blank">
+//         <Live width={20} height={20} />
+//       </a>
+//       <a href={github} rel="noopener noreferrer" target="_blank">
+//         <Github width={20} height={20} />
+//       </a>
+//     </StyledLinks>
+//   )
+// }
 
 const Projects = ({ projects }) => {
   console.log(projects)
@@ -246,7 +245,7 @@ const Projects = ({ projects }) => {
                 const { title, html, xy, height, image, tech, ...rest } = item
                 console.log(xy)
 
-                const paragraph = html.replace(/(<([^>]+)>)/gi, "")
+                // const paragraph = html.replace(/(<([^>]+)>)/gi, "")
 
                 // Translate
                 const translate =
@@ -265,7 +264,7 @@ const Projects = ({ projects }) => {
 
                 return (
                   <Item
-                    key={name}
+                    key={name + key}
                     options={{
                       translate: translate.toString(),
                       margin: Math.round(height / 4).toString(),
