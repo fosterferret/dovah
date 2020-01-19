@@ -15,7 +15,7 @@ const StyledContainer = styled.section`
   margin: 0 auto;
   ${media.tablet`padding: 70px 0;`};
   article {
-    margin-top: 200px;
+    margin-top: 250px;
   }
 `
 
@@ -29,10 +29,20 @@ const StyledContent = styled.div`
   padding: 30px 25px 20px;
 `
 
+const StyledProjectName = styled.h5`
+  font-size: 28px;
+  margin: 0 0 20px;
+  font-size: 24px;
+  color: ${theme.colors.titleWhite};
+  color: rgb(245, 241, 219);
+  text-transform: uppercase;
+  font-family: ${theme.fonts.Inconsolata};
+`
+
 const StyledFeaturedImg = styled(Img)`
   max-width: 100%;
   vertical-align: middle;
-  border-radius: ${theme.borderRadius};
+
   position: relative;
   mix-blend-mode: multiply;
   filter: grayscale(100%) contrast(1) brightness(90%);
@@ -50,6 +60,7 @@ const StyledImgContainer = styled.a`
   height: 100%;
   grid-column: 1 / -1;
   opacity: 0.25;
+
   &:hover,
   &:focus {
     background: transparent;
@@ -86,32 +97,33 @@ const StyledProjectInner = styled.div`
 
 const StyledProject = styled.div`
   display: grid;
-  min-height: 430px;
+  min-height: 410px;
   grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
   margin-bottom: 100px;
-  ${StyledImgContainer} {
+  box-shadow: 0 10px 30px -15px black;
+  border-radius: ${theme.borderRadius} ${StyledImgContainer} {
     grid-column: 1 / 8;
     height: 100%;
     grid-column: 1 / -1;
     opacity: 0.25;
-  };
-
+  }
   &:nth-of-type(odd) {
     ${StyledContent} {
       grid-column: 7 / -1;
       text-align: right;
-        grid-column: 1 / -1;
+      grid-column: 1 / -1;
       ${media.phablet`padding: 30px 25px 20px;`};
     }
 
-  cursor: default;
-  &:hover,
-  &:focus {
-    outline: 0;
-    ${StyledProjectInner} {
-      transform: translateY(-5px);
+    cursor: default;
+    &:hover,
+    &:focus {
+      outline: 0;
+      ${StyledProjectInner} {
+        transform: translateY(-5px);
+      }
     }
   }
 `
@@ -135,28 +147,36 @@ const StyledLinks = styled.div`
     }
   }
 `
+const StyledTechList = styled.ul`
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 25px 0 10px;
+  list-style: none;
+  justify-content: flex-end;
 
-// const StyledDescription = styled.div`
-//   position: relative;
-//   border-radius: ${theme.borderRadius};
-//   z-index: 4;
-//   padding: 10px;
-//   background-color: ${theme.colors.darkNavyEndLite};
-//   color: ${theme.colors.lightGrey};
-//   font-size: ${theme.fontSizes.md};
-//   box-shadow: 0 9px 15px -10px ${theme.colors.darkNavyEndLite};
-//   p {
-//     margin: 0;
-//     width: 100%;
-//   }
-// `
+  li {
+    font-family: ${theme.fonts.Inconsolata};
+    font-size: ${theme.fontSizes.xs};
+    color: ${theme.colors.lightGrey};
+    margin-right: 10px;
+    margin-bottom: 7px;
+    white-space: nowrap;
+    text-align: right;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+`
 
 const StyledDescription = styled.div`
   position: relative;
   z-index: 2;
   padding: 25px;
   background-color: ${theme.colors.darkNavyEnd};
-  color: ${theme.colors.titleWhite};
+
   font-size: ${theme.fontSizes.md};
   border-radius: ${theme.borderRadius};
   background-color: transparent;
@@ -223,7 +243,7 @@ const Projects = ({ projects }) => {
               style={{ height: Math.max(...heights) }}
             >
               {display.map((item, key) => {
-                const { title, html, xy, height, image, ...rest } = item
+                const { title, html, xy, height, image, tech, ...rest } = item
                 console.log(xy)
 
                 const paragraph = html.replace(/(<([^>]+)>)/gi, "")
@@ -237,10 +257,10 @@ const Projects = ({ projects }) => {
                 // Styled
                 const Item = styled.div(
                   val =>
-                    `@media (min-width: 1000px) {
-                margin-top: ${val.options.margin}px;
-                transform: translateY(${val.options.translate}px) translate3d(${val.options.x}px,${val.options.y}px,0);
-              }`
+                    `@media (min-width: 1024px) {
+                    margin-top: ${val.options.margin}px;
+                    transform: translateY(${val.options.translate}px) translate3d(${val.options.x}px,${val.options.y}px,0);
+                  }`
                 )
 
                 return (
@@ -257,11 +277,30 @@ const Projects = ({ projects }) => {
                   >
                     <StyledProject>
                       <StyledContent>
+                        <StyledProjectName>
+                          {external ? (
+                            <a
+                              href={external}
+                              target="_blank"
+                              rel="nofollow noopener noreferrer"
+                              aria-label="External Link"
+                            >
+                              {title}
+                            </a>
+                          ) : (
+                            title
+                          )}
+                        </StyledProjectName>
                         <StyledDescription
                           dangerouslySetInnerHTML={{ __html: html }}
                         />
-                        {/* <h3>{title}</h3>
-                      <p>{paragraph}</p> */}
+                        {tech && (
+                          <StyledTechList>
+                            {tech.map((tech, i) => (
+                              <li key={i}>{tech}</li>
+                            ))}
+                          </StyledTechList>
+                        )}
                       </StyledContent>
                       <StyledImgContainer
                         target="_blank"
