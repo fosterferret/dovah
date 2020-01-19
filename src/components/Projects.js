@@ -15,18 +15,62 @@ const StyledContainer = styled.section`
   margin: 0 auto;
   ${media.tablet`padding: 70px 0;`};
   article {
-    margin-top: 200px
+    margin-top: 200px;
   }
 `
-const StyledGrid = styled.div`
-  margin-top: 50px;
 
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 15px;
-    position: relative;
-    ${media.desktop`grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));`};
+const StyledContent = styled.div`
+  position: relative;
+  grid-column: 1 / 7;
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  padding: 40px 40px 30px;
+  z-index: 5;
+  padding: 30px 25px 20px;
+`
+
+const StyledFeaturedImg = styled(Img)`
+  max-width: 100%;
+  vertical-align: middle;
+  border-radius: ${theme.borderRadius};
+  position: relative;
+  mix-blend-mode: multiply;
+  filter: grayscale(100%) contrast(1) brightness(90%);
+  object-fit: cover;
+  width: auto;
+  height: 100%;
+  filter: grayscale(100%) contrast(1) brightness(80%);
+`
+
+const StyledImgContainer = styled.a`
+  grid-row: 1 / -1;
+  position: relative;
+  z-index: 1;
+  background-color: ${theme.colors.darkYellow};
+  height: 100%;
+  grid-column: 1 / -1;
+  opacity: 0.25;
+  &:hover,
+  &:focus {
+    background: transparent;
+    &:before,
+    ${StyledFeaturedImg} {
+      background: transparent;
+      filter: none;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    background-color: ${theme.colors.darkNavyEnd};
+    mix-blend-mode: screen;
   }
 `
 
@@ -41,7 +85,27 @@ const StyledProjectInner = styled.div`
 `
 
 const StyledProject = styled.div`
-  transition: ${theme.transition};
+  display: grid;
+  min-height: 430px;
+  grid-gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  margin-bottom: 100px;
+  ${StyledImgContainer} {
+    grid-column: 1 / 8;
+    height: 100%;
+    grid-column: 1 / -1;
+    opacity: 0.25;
+  };
+
+  &:nth-of-type(odd) {
+    ${StyledContent} {
+      grid-column: 7 / -1;
+      text-align: right;
+        grid-column: 1 / -1;
+      ${media.phablet`padding: 30px 25px 20px;`};
+    }
+
   cursor: default;
   &:hover,
   &:focus {
@@ -50,37 +114,6 @@ const StyledProject = styled.div`
       transform: translateY(-5px);
     }
   }
-`
-
-const StyledList = styled.ul`
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 1rem;
-  li {
-    margin-right: 1rem;
-    font-family: Inconsolata;
-    font-size: ${theme.fontSizes.sm};
-  }
-`
-
-const StyledTitle = styled.h2`
-  padding-bottom: 0.25rem;
-  color: #F5F1DA;
-  // font-family: ${theme.fonts.Inconsolata};
-  font-size: ${theme.fontSizes.l};
-  text-align: right;
-`
-
-const StyledImage = styled(Img)`
-  background: ${theme.colors.darkNavyEndLite};
-  width: 100%;
-  max-width: 100%;
-  vertical-align: middle;
-`
-
-const StyledBottom = styled.div`
-  display: flex;
-  justify-content: space-between;
 `
 
 const StyledLinks = styled.div`
@@ -119,40 +152,22 @@ const StyledLinks = styled.div`
 // `
 
 const StyledDescription = styled.div`
-  font-size: 17px;
-  color: ${theme.colors.textNavy};
-`
-
-const StyledDetailsCard = styled.div`
   position: relative;
-  grid-column: 1 / 8;
-  grid-row: 1 / -1;
-  &:before {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    background-color: ${theme.colors.darkNavyEndLite};
-    transform: rotate(45deg);
-    bottom: -85px;
-    margin-left: 97.5%;
-    position: relative;
-    z-index: 6;
+  z-index: 2;
+  padding: 25px;
+  background-color: ${theme.colors.darkNavyEnd};
+  color: ${theme.colors.titleWhite};
+  font-size: ${theme.fontSizes.md};
+  border-radius: ${theme.borderRadius};
+  background-color: transparent;
+  padding: 20px 0;
+  box-shadow: none;
+  &:hover {
+    box-shadow: none;
   }
-`
-
-const StyledImageContainer = styled.a`
-  grid-column: 6 / -1;
-  grid-row: 1 / -1;
-  position: relative;
-  z-index: 1;
-  mix-blend-mode: multiply;
-  border-radius: ${theme.radius + 1}px;
-  ${media.tablet`height: 100%;`};
-  ${media.tablet`
-    grid-column: 1 / -1;
-    opacity: 0.25;
-  `};
+  p {
+    margin: 0;
+  }
 `
 
 const Links = ({ github, live }) => {
@@ -173,7 +188,7 @@ const Projects = ({ projects }) => {
 
   const [bind, { width }] = useMeasure()
   const columnCount = useMediaQuery(
-    ["(max-width: 639px)", "(max-width: 1023px)"],
+    ["(max-width: 700px)", "(max-width: 1023px)"],
     [1, 2],
     3
   )
@@ -208,7 +223,7 @@ const Projects = ({ projects }) => {
               style={{ height: Math.max(...heights) }}
             >
               {display.map((item, key) => {
-                const { title, html, xy, height, ...rest } = item
+                const { title, html, xy, height, image, ...rest } = item
                 console.log(xy)
 
                 const paragraph = html.replace(/(<([^>]+)>)/gi, "")
@@ -222,7 +237,7 @@ const Projects = ({ projects }) => {
                 // Styled
                 const Item = styled.div(
                   val =>
-                    `@media (min-width: 1024px) {
+                    `@media (min-width: 1000px) {
                 margin-top: ${val.options.margin}px;
                 transform: translateY(${val.options.translate}px) translate3d(${val.options.x}px,${val.options.y}px,0);
               }`
@@ -240,10 +255,21 @@ const Projects = ({ projects }) => {
                     className="skills__item"
                     style={{ ...rest }}
                   >
-                    <div className="skills__box">
-                      <h3>{title}</h3>
-                      <p>{paragraph}</p>
-                    </div>
+                    <StyledProject>
+                      <StyledContent>
+                        <StyledDescription
+                          dangerouslySetInnerHTML={{ __html: html }}
+                        />
+                        {/* <h3>{title}</h3>
+                      <p>{paragraph}</p> */}
+                      </StyledContent>
+                      <StyledImgContainer
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                      >
+                        <StyledFeaturedImg fluid={image} />
+                      </StyledImgContainer>
+                    </StyledProject>
                   </Item>
                 )
               })}

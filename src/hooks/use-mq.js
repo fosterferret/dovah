@@ -14,7 +14,7 @@ export default function useMediaQuery(queries, values, defaultValue) {
     const handler = () => setValue(match)
     window.addEventListener("resize", handler)
 
-    return () => window.removeEventListener(handler)
+    return () => window.removeEventListener("resize", handler)
   }, [])
 
   return value
