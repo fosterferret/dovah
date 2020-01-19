@@ -6,9 +6,9 @@ image: "images/insightly.png"
 tech:
   - React
   - Node
-  - SQLite
+  - Postgres
 feature: true
 height: 450
 ---
 
-A gamified erm chore-tracking app built from the ground up with React for homes to effectively manage responsibilities.
+A publishing platform for writers with built-in analytic features to guage readership and writer growth over a period of time.

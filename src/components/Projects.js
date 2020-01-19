@@ -4,8 +4,8 @@ import styled from "styled-components"
 import media from "../styles/media"
 import theme from "../styles/theme"
 import Img from "gatsby-image"
-// import Live from "../svgs/live.js"
-// import Github from "../svgs/github.svg"
+import Live from "../svgs/live.js"
+import Github from "../svgs/github.svg"
 import useMediaQuery from "../hooks/use-mq"
 import useMeasure from "../hooks/use-measure"
 
@@ -96,7 +96,7 @@ const StyledProjectInner = styled.div`
 
 const StyledProject = styled.div`
   display: grid;
-  min-height: 410px;
+  min-height: 420px;
   grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
@@ -124,6 +124,13 @@ const StyledProject = styled.div`
         transform: translateY(-5px);
       }
     }
+  }
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    transform: translateY(-5px);
+    transition: all 0.25s ease-in;
   }
 `
 
@@ -175,7 +182,7 @@ const StyledDescription = styled.div`
   z-index: 2;
   padding: 25px;
   background-color: ${theme.colors.darkNavyEnd};
-
+  color: white;
   font-size: ${theme.fontSizes.md};
   border-radius: ${theme.borderRadius};
   background-color: transparent;
@@ -189,18 +196,38 @@ const StyledDescription = styled.div`
   }
 `
 
-// const Links = ({ github, live }) => {
-//   return (
-//     <StyledLinks>
-//       <a href={live} rel="noopener noreferrer" target="_blank">
-//         <Live width={20} height={20} />
-//       </a>
-//       <a href={github} rel="noopener noreferrer" target="_blank">
-//         <Github width={20} height={20} />
-//       </a>
-//     </StyledLinks>
-//   )
-// }
+const StyledLinkWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  margin-top: 10px;
+  margin-left: -10px;
+  color: rgb(245, 241, 219);
+  a {
+    padding: 10px;
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+    path {
+      fill: rgb(245, 241, 219);
+    }
+  }
+`
+
+const Links = ({ github, live }) => {
+  return (
+    <>
+      <a href={live} rel="noopener noreferrer" target="_blank">
+        <Live width={20} height={20} />
+      </a>
+      <a href={github} rel="noopener noreferrer" target="_blank">
+        <Github width={20} height={20} />
+      </a>
+    </>
+  )
+}
 
 const Projects = ({ projects }) => {
   console.log(projects)
@@ -242,7 +269,17 @@ const Projects = ({ projects }) => {
               style={{ height: Math.max(...heights) }}
             >
               {display.map((item, key) => {
-                const { title, html, xy, height, image, tech, ...rest } = item
+                const {
+                  title,
+                  html,
+                  xy,
+                  height,
+                  image,
+                  tech,
+                  github,
+                  live,
+                  ...rest
+                } = item
                 console.log(xy)
 
                 // const paragraph = html.replace(/(<([^>]+)>)/gi, "")
@@ -300,6 +337,9 @@ const Projects = ({ projects }) => {
                             ))}
                           </StyledTechList>
                         )}
+                        <StyledLinkWrapper>
+                          <Links github={github} live={live} />
+                        </StyledLinkWrapper>
                       </StyledContent>
                       <StyledImgContainer
                         target="_blank"
