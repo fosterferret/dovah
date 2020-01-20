@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
   span {
     display: inline-block;
     height: 1px;
-    background: #fff;
+    background: #FCDD3B;
   }
 
   ${props =>

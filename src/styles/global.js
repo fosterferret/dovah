@@ -13,8 +13,8 @@ ${props => props.theme.preload.map(url => '@import url("' + url + '");')}
     box-sizing: border-box;
     line-height: 1.5em;
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
     font-kerning: auto;
   }
 
@@ -38,11 +38,13 @@ ${props => props.theme.preload.map(url => '@import url("' + url + '");')}
   body {
     background-color: ${colors.darkNavyEnd};
     width: 100%;
+    overflow-x: hidden;
     color: #fff;
     font-family: ${fonts.FuturaPT};
-    line-height: 1.4em;
+    line-height: 1.5em;
     font-size: ${fontSizes.xl} 
-    ${media.tablet`font-size: ${fontSizes.md};`}
+    ${media.tablet`font-size: ${fontSizes.lg};`};
+    ${media.phablet`font-size: ${fontSizes.md}`};
   }
 
   h1, h2, h3, h4, h5, h6 {

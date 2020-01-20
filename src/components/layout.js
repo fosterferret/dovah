@@ -6,6 +6,8 @@ import GlobalStyle from "../styles/global"
 import { ThemeProvider } from "styled-components"
 import theme from "../styles/theme"
 import Navigation from "../components/Navigation"
+import Head from './Head'
+import "../styles/main.scss"
 
 const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
@@ -22,6 +24,7 @@ const Layout = ({ children, location }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+      <Head/>
       <main>{children}</main>
       <Navigation location={location} />
     </ThemeProvider>

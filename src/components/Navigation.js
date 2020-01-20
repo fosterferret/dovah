@@ -8,6 +8,7 @@ import ToggleMenu from "../components/ToggleMenu"
 import Menu from "./Menu"
 import Home from "./HomeIcon"
 import getWindowWidth from "../utils/getWindowWidth"
+import SideFooter from './SideFooter'
 
 export const Wrapper = styled.div`
   ${media.tablet`
@@ -54,7 +55,7 @@ export const Header = styled.header`
     align-items: flex-end;
     width: 100%;
     min-height: 7rem;
-    background-image: linear-gradient(to bottom,rgba(22,40,60,0.0) 0%,rgba(22,40,60,1) 50%);
+    background-image: linear-gradient(to bottom,rgba(12,31,44,0.0) 0%,rgba(12,31,44,1) 50%);
     ${generateSpace("padding")};
   `}
 `
@@ -83,10 +84,10 @@ class Navigation extends Component {
     window.addEventListener("resize", this.updateState)
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prev) {
     const { location } = this.props
 
-    if (location.pathname !== prevProps.location.pathname) {
+    if (location.pathname !== prev.location.pathname) {
       this.setState({ open: false })
     }
   }
@@ -102,6 +103,7 @@ class Navigation extends Component {
         <Drawer open={open}>
           <div>
             <Menu open={open} />
+            <SideFooter/>
           </div>
         </Drawer>
       </Wrapper>

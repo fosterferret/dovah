@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from "react"
-// import { Link } from "gatsby"
 import useHero from "../hooks/use-hero"
 import Layout from "../components/layout"
 import Hero from "../components/Hero"
