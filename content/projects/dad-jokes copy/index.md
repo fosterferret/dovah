@@ -1,5 +1,4 @@
 ---
-date: '1'
 title: 'DadJokes'
 github: 'https://github.com/'
 live: 'https://github.com/'
@@ -9,7 +8,7 @@ tech:
   - Node
   - Postgres
 feature: true
-height: 500
+height: 450
 ---
 
-A single repository of dad jokes that is easy to access, create jokes, navigate and can be viewed by anyone.
+A singleg repository of dad jokes that is easy to access, create jokes, navigate and can be viewed by anyone.

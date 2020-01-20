@@ -31,7 +31,7 @@ export default {
     xxs: "12px",
     xs: "14px",
     sm: "15.5px",
-    md: "17px",
+    md: "18px",
     l: "20px",
     xl: "22px",
     xxl: "25px",
