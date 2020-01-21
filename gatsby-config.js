@@ -8,6 +8,8 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sass`,
+
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -21,9 +23,6 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
-    },
-    {
-      resolve: 'gatsby-plugin-sass',
     },
     {
       resolve: `gatsby-transformer-remark`,

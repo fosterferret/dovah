@@ -1,8 +1,9 @@
 ---
-title: 'MineChore'
-github: 'https://github.com/fosterferret'
-live: 'https://github.com/fosterferret'
-image: 'images/minechore.png'
+date: "3"
+title: "MineChore"
+github: "https://github.com/fosterferret"
+live: "https://github.com/fosterferret"
+image: "images/minechore.png"
 tech:
   - React
   - Node
