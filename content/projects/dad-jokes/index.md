@@ -9,7 +9,7 @@ tech:
   - Node
   - Postgres
 feature: true
-height: 500
+height: 450
 ---
 
 A single repository of dad jokes that is easy to access, create jokes, navigate and can be viewed by anyone.

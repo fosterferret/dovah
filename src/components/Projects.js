@@ -18,6 +18,15 @@ const StyledContainer = styled.section`
   }
 `
 
+const StyledLabel = styled.h4`
+  font-size: ${theme.fontSizes.sm};
+  font-weight: normal;
+  color: ${theme.colors.darkYellow};
+  font-family: ${theme.fonts.Inconsolata};
+  margin-top: 10px;
+  padding-top: 0;
+`
+
 const StyledContent = styled.div`
   position: relative;
   grid-column: 1 / 7;
@@ -55,7 +64,7 @@ const StyledImgContainer = styled.a`
   grid-row: 1 / -1;
   position: relative;
   z-index: 1;
-  background-color: ${theme.colors.darkYellow};
+  background-color: ${theme.colors.cardGrey};
   height: 100%;
   grid-column: 1 / -1;
   opacity: 0.25;
@@ -212,6 +221,8 @@ const StyledLinkWrapper = styled.div`
     }
     path {
       fill: rgb(245, 241, 219);
+      &:hover {
+        fill: ${theme.colors.lightYellow}
     }
   }
 `
@@ -313,6 +324,7 @@ const Projects = ({ projects }) => {
                   >
                     <StyledProject>
                       <StyledContent>
+                        <StyledLabel>Featured</StyledLabel>
                         <StyledProjectName>
                           {external ? (
                             <a
