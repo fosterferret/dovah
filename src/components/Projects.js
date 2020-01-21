@@ -312,7 +312,7 @@ const Projects = ({ projects }) => {
 
                 return (
                   <Item
-                    key={name + key}
+                    key={key}
                     options={{
                       translate: translate.toString(),
                       margin: Math.round(height / 4).toString(),
