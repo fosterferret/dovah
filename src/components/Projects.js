@@ -325,20 +325,7 @@ const Projects = ({ projects }) => {
                     <StyledProject>
                       <StyledContent>
                         <StyledLabel>Featured</StyledLabel>
-                        <StyledProjectName>
-                          {external ? (
-                            <a
-                              href={external}
-                              target="_blank"
-                              rel="nofollow noopener noreferrer"
-                              aria-label="External Link"
-                            >
-                              {title}
-                            </a>
-                          ) : (
-                            title
-                          )}
-                        </StyledProjectName>
+                        <StyledProjectName>{title}</StyledProjectName>
                         <StyledDescription
                           dangerouslySetInnerHTML={{ __html: html }}
                         />
