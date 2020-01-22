@@ -190,7 +190,7 @@ const StyledDescription = styled.div`
   position: relative;
   z-index: 2;
   padding: 25px;
-  background-color: ${theme.colors.darkNavyEnd};
+  background-color: ${theme.colors.cardGrey};
   color: white;
   font-size: ${theme.fontSizes.md};
   border-radius: ${theme.borderRadius};
