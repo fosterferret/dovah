@@ -132,6 +132,14 @@
   
       @include breakpoint(medium only) {
         flex: 0 0 auto;
+        width: 40% !important;
+        margin: 0 auto;
+      }
+
+      @include breakpoint(small only) {
+        flex: 0 0 auto;
+        width: 85% !important;
+        margin: 0 auto;
       }
   
       @include breakpoint(large) {
