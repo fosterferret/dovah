@@ -1,11 +1,10 @@
 /* eslint-disable react/prop-types */
-import React from 'react'
-import Link from 'gatsby-link'
-import styled, { css } from 'styled-components'
+import React from "react"
+import Link from "gatsby-link"
+import styled, { css } from "styled-components"
 import media from "../styles/media"
 import theme from "../styles/theme"
-import { generateSpace } from '../styles/shared-styles'
-
+import { generateSpace } from "../styles/shared-styles"
 
 const NavWrapper = styled.nav`
   position: fixed;
@@ -17,17 +16,21 @@ const NavWrapper = styled.nav`
   align-items: flex-end;
   justify-content: space-between;
   pointer-events: none;
-  ${generateSpace('padding')};
-  ${props => !props.open ? `counter-reset: li;` : ''}
-  
+  ${generateSpace("padding")};
+  ${props => (!props.open ? `counter-reset: li;` : "")}
+
+  .current-page {
+    color: ${theme.colors.darkYellow};
+  }
+
   ul:last-child li {
     text-align: right;
-    
+
     a {
-      transition: color .4s ease;
+      transition: color 0.4s ease;
       will-change: color;
       position: relative;
-    
+
       &:not(.active)::before {
         opacity: 1;
         transform: translate(-1rem, -50%);
@@ -35,7 +38,7 @@ const NavWrapper = styled.nav`
 
       &:hover {
         color: #fff;
-        
+
         &::before {
           transform: translate(0, -50%);
           opacity: 1;
@@ -61,41 +64,42 @@ export const NavItem = styled.li`
   list-style: none;
   padding: 0.5rem 0;
   line-height: 0.85em;
-  
+
   &:last-child {
     padding-bottom: 0;
   }
 
   a {
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-family: ${theme.fonts.Inconsolata};
     pointer-events: all;
-    transition: color .1s ease;
+    transition: color 0.1s ease;
     line-height: 1em;
-    ${props => props.highlight 
-      ? css`
-        color: ${theme.colors.darkYellow};
-        
-        &:hover::before {
-          display: none !important;
-          color: #fff;
-        }
-      `
-      : css`
-        color: ${theme.colors.darkGrey};
-        &:hover {
-          color: white;
-        }
-      `}
+    ${props =>
+      props.highlight
+        ? css`
+            color: ${theme.colors.darkYellow};
+
+            &:hover::before {
+              display: none !important;
+              color: #fff;
+            }
+          `
+        : css`
+            color: ${theme.colors.darkGrey};
+            &:hover {
+              color: white;
+            }
+          `}
   }
 `
 
 export const NavLink = styled(Link).attrs({
-  activeClassName: 'active'
+  activeClassName: "active",
 })`
   &.active {
     color: ${theme.colors.darkYellow};
-    
+
     &::before {
       transform: translate(0, -50%);
       opacity: 1;
@@ -103,37 +107,69 @@ export const NavLink = styled(Link).attrs({
   }
 `
 
-
-const Menu = ({open}) =>
+const Menu = ({ open }) => (
   <NavWrapper open={open}>
     <Nav open={open}>
       <NavItem>
-        <a href="https://twitter.com/auxinom" rel="noopener noreferrer" target="_blank">TWITTER</a>
+        <a
+          href="https://twitter.com/auxinom"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          TWITTER
+        </a>
       </NavItem>
       <NavItem>
-        <a href="https://github.com/fosterferret" rel="noopener noreferrer" target="_blank">GITHUB</a>
+        <a
+          href="https://github.com/fosterferret"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          GITHUB
+        </a>
       </NavItem>
       <NavItem>
-        <a href="https://medium.com/@AuxiNom" rel="noopener noreferrer" target="_blank">MEDIUM</a>
+        <a
+          href="https://medium.com/@AuxiNom"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          MEDIUM
+        </a>
       </NavItem>
       <NavItem>
-        <a href="https://github.com/fosterferret" rel="noopener noreferrer" target="_blank">LINKEDIN</a>
+        <a
+          href="https://github.com/fosterferret"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          LINKEDIN
+        </a>
       </NavItem>
     </Nav>
     <Nav>
       <NavItem open={open}>
-        <NavLink open={open} to='/'>HOME</NavLink>
+        <NavLink open={open} to="/" activeClassName="current-page">
+          HOME
+        </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink to='/work'>WORK</NavLink>
+        <NavLink to="/work" activeClassName="current-page">
+          WORK
+        </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink to='/profile'>PROFILE</NavLink>
+        <NavLink to="/profile" activeClassName="current-page">
+          PROFILE
+        </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink to='/lists'>LISTS</NavLink>
+        <NavLink to="/lists" activeClassName="current-page">
+          LISTS
+        </NavLink>
       </NavItem>
     </Nav>
   </NavWrapper>
+)
 
 export default Menu
