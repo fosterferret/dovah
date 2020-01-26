@@ -56,7 +56,7 @@ const LastPlayed = () => {
   const recentTracks = useSpotify()
   const url = recentTracks.preview
   const [play, handlePlay] = useAudio(url)
-  console.log(play)
+  console.log("playing?: "play)
   return (
     <StyledContainer onClick={handlePlay}>
       <div className="left">
