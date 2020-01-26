@@ -22,6 +22,7 @@ const StyledImg = styled(Img)`
 
 const StyledContainer = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 250px;
   position: fixed;
@@ -37,19 +38,22 @@ const StyledContainer = styled.div`
     font-weight: bold;
     color: ${theme.colors.lightGrey};
   }
-  .left {
+  .top {
     display: flex;
-    flex-direction: column;
   }
 `
 
 const StyledSongDetails = styled.div`
-  margin-top: 1.6rem;
   line-height: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  padding-left: 0.4rem;
+`
+
+const StyledSong = styled.div`
+  display: flex;
 `
 
 const LastPlayed = () => {
@@ -60,14 +64,32 @@ const LastPlayed = () => {
 
   return (
     <StyledContainer onClick={handlePlay ? handlePlay : null}>
-      <div className="left">
-        <p>Bumping:</p>
-        <StyledImg fluid={recentTracks.image} />
+      <div className="top">
+        <p>Last Played.</p>
       </div>
-      <StyledSongDetails>
-        <p>{recentTracks.track}</p>
-        <p>{recentTracks.artist}</p>
-      </StyledSongDetails>
+      <StyledSong>
+        <StyledImg fluid={recentTracks.image} />
+        <StyledSongDetails>
+          <p>{recentTracks.track}</p>
+          <p>{recentTracks.artist}</p>
+
+          {/* <div className="play">
+        {play ?
+          <svg
+            className="controls__play"
+            width="14"
+            height="18"
+            viewBox="0 0 14 18"
+            fill="grey"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0.0195312 0.269531L13.7305 9L0.0195312 17.7305V0.269531Z" />
+          </svg>
+          : null
+          }
+        </div> */}
+        </StyledSongDetails>
+      </StyledSong>
     </StyledContainer>
   )
 }
