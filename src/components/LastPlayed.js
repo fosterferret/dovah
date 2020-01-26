@@ -74,9 +74,12 @@ const LastPlayed = () => {
 
 const useAudio = url => {
   const ren = a => {
-    if (window.Audio) {
-      return new Audio(a)
-    } else return null
+    if (typeof window !== undefined) {
+      if (window.Audio) {
+        return new Audio(a)
+      } else return null
+    }
+    return null;
   }
 
   let audioFile = ren(url)
