@@ -24,8 +24,8 @@ const StyledContainer = styled.div`
   display: flex;
   width: 100%;
   max-width: 250px;
-  position: absolute;
-  right: 10px;
+  position: fixed;
+  right: -5px;
   padding: 1rem;
   p:nth-of-type(1) {
     font-size: 12px;
@@ -72,7 +72,8 @@ const LastPlayed = () => {
 }
 
 const useAudio = url => {
-  const [audio] = useState(new Audio(url))
+  const audioFile = new Audio(url)
+  const [audio] = useState(audioFile)
   const [play, setPlay] = useState(false)
 
   const handlePlay = () => setPlay(!play)
