@@ -9,7 +9,7 @@ const Logo = () => (
     <Tally
       width={100}
       height={52}
-      style={{ position: "absolute", top: "22", backgroundSize: "20px 30px" }}
+      style={{ position: "absolute", top: "25", backgroundSize: "20px 30px" }}
     />{" "}
     <LastPlayed/>
   </header>

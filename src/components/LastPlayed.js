@@ -25,8 +25,8 @@ const StyledContainer = styled.div`
   width: 100%;
   max-width: 250px;
   position: fixed;
-  right: -5px;
-  padding: 1rem;
+  right: -50px;
+  padding: 0.3rem;
   p:nth-of-type(1) {
     font-size: 12px;
     font-weight: bold;
@@ -61,7 +61,7 @@ const LastPlayed = () => {
   return (
     <StyledContainer onClick={handlePlay ? handlePlay : null}>
       <div className="left">
-        <p>listening.</p>
+        <p>Bumping:</p>
         <StyledImg fluid={recentTracks.image} />
       </div>
       <StyledSongDetails>
