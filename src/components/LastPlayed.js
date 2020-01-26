@@ -57,8 +57,9 @@ const LastPlayed = () => {
   const url = recentTracks.preview
   const [play, handlePlay] = useAudio(url)
   console.log("playing?:", play)
+
   return (
-    <StyledContainer onClick={handlePlay}>
+    <StyledContainer onClick={handlePlay ? handlePlay : null}>
       <div className="left">
         <p>listening.</p>
         <StyledImg fluid={recentTracks.image} />
@@ -72,21 +73,26 @@ const LastPlayed = () => {
 }
 
 const useAudio = url => {
-  const audioFile = new Audio(url)
+  const audioFile = typeof window !== undefined ? new Audio(url) : null
   const [audio] = useState(audioFile)
   const [play, setPlay] = useState(false)
 
   const handlePlay = () => setPlay(!play)
 
   useEffect(() => {
-    play ? audio.play() : audio.pause()
+    if (audio) {
+      play ? audio.play() : audio.pause()
+    }
+    return
   }, [play])
 
   useEffect(() => {
-    audio.addEventListener("ended", () => setPlay(false))
-    return () => {
-      audio.removeEventListener("ended", () => setPlay(false))
-    }
+    if (audio) {
+      audio.addEventListener("ended", () => setPlay(false))
+      return () => {
+        audio.removeEventListener("ended", () => setPlay(false))
+      }
+    } return;
   }, [])
 
   return [play, handlePlay]
