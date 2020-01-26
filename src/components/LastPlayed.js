@@ -73,7 +73,14 @@ const LastPlayed = () => {
 }
 
 const useAudio = url => {
-  const audioFile = new Audio ? new Audio(url) : null
+  const ren = a => {
+    if (window.Audio) {
+      return new Audio(a)
+    } else return null
+  }
+
+  let audioFile = ren(url)
+
   const [audio] = useState(audioFile)
   const [play, setPlay] = useState(false)
 
@@ -92,7 +99,8 @@ const useAudio = url => {
       return () => {
         audio.removeEventListener("ended", () => setPlay(false))
       }
-    } return;
+    }
+    return
   }, [])
 
   return [play, handlePlay]
