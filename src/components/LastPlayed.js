@@ -55,8 +55,8 @@ const StyledSongDetails = styled.div`
 const LastPlayed = () => {
   const recentTracks = useSpotify()
   const url = recentTracks.preview
+  // eslint-disable-next-line no-unused-vars
   const [play, handlePlay] = useAudio(url)
-  console.log("playing?:", play)
 
   return (
     <StyledContainer onClick={handlePlay ? handlePlay : null}>
@@ -73,7 +73,7 @@ const LastPlayed = () => {
 }
 
 const useAudio = url => {
-  const audioFile = typeof Audio !== undefined ? new Audio(url) : null
+  const audioFile = new Audio ? new Audio(url) : null
   const [audio] = useState(audioFile)
   const [play, setPlay] = useState(false)
 
@@ -87,7 +87,7 @@ const useAudio = url => {
   }, [play])
 
   useEffect(() => {
-    if (audio) {
+    if (audio !== null) {
       audio.addEventListener("ended", () => setPlay(false))
       return () => {
         audio.removeEventListener("ended", () => setPlay(false))
