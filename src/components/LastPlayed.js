@@ -73,7 +73,7 @@ const LastPlayed = () => {
 }
 
 const useAudio = url => {
-  const audioFile = typeof window !== undefined ? new Audio(url) : null
+  const audioFile = typeof Audio !== undefined ? new Audio(url) : null
   const [audio] = useState(audioFile)
   const [play, setPlay] = useState(false)
 
