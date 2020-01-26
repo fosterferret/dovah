@@ -74,7 +74,7 @@ const LastPlayed = () => {
 
 const useAudio = url => {
   const ren = a => {
-    if (typeof window !== undefined) {
+    if (typeof window !== 'undefined' && window) {
       if (window.Audio) {
         return new Audio(a)
       } else return null
