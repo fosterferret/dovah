@@ -1,5 +1,6 @@
 import React from "react"
 import Tally from "../svgs/logo.svg"
+import LastPlayed from './LastPlayed'
 // import theme from "../styles/theme"
 
 const Logo = () => (
@@ -25,6 +26,7 @@ const Logo = () => (
     >
       Made in 2019.
     </a> */}
+    <LastPlayed/>
   </header>
 )
 

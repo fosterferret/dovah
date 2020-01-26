@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from "gatsby"
 
 const Spotify = () => {
-  const data = useStaticQuery(graphql`
+  const result = useStaticQuery(graphql`
     query {
       allSpotifyRecentTrack(sort: { fields: played_at, order: DESC }) {
         edges {
@@ -21,6 +21,9 @@ const Spotify = () => {
               album {
                 name
               }
+              artists {
+                name
+              }
             }
             played_at
           }
@@ -28,19 +31,17 @@ const Spotify = () => {
       }
     }
   `)
-//   const result = []
+  //   const result = []
+  console.log(result.allSpotifyRecentTrack.edges[0])
+  const data = result.allSpotifyRecentTrack.edges[0].node
 
-//   console.log(data.allMarkdownRemark.edges)
-//   data.allMarkdownRemark.edges.forEach(edge =>
-//     result.push({
-//       ...edge.node.frontmatter,
-//       image: edge.node.frontmatter.image.childImageSharp.fluid
-//         ? edge.node.frontmatter.image.childImageSharp.fluid
-//         : null,
-//       html: edge.node.html,
-//     })
-//   )
-  return data
+  return {
+    track: data.track.name,
+    preview: data.track.preview_url,
+    album: data.track.album.name,
+    image: data.track.image.localFile.childImageSharp.fluid,
+    artist: data.track.artists[0].name
+  }
 }
 
 export default Spotify
