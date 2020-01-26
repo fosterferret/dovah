@@ -25,6 +25,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-spotify`,
+      options: {
+        clientId: `b84858ddfe054611b8715d8fdb13ba74`,
+        clientSecret: `c87ec73d7c5e49dc8c8cf2977040650b`,
+        refreshToken: `AQBkLghvT8DPUpo9qL_5meXaNdvCJ-IlTgY-j7zA23nj37OHRGbI5yCzjhzGLIEnvSUGIjJmQAFjRPO1hM_KGU2KfJZEa7FALwngsC8RJPA2HQQwqPRM4IsqM-AThIxeriE`,
+
+        fetchPlaylists: true, // optional. Set to false to disable fetching of your playlists
+        fetchRecent: true, // optional. Set to false to disable fetching of your recently played tracks
+        timeRanges: ["short_term", "medium_term", "long_term"], // optional. Set time ranges to be fetched
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
