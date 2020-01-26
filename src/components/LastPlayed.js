@@ -73,16 +73,16 @@ const LastPlayed = () => {
 }
 
 const useAudio = url => {
-  const ren = a => {
-    if (typeof window !== 'undefined' && window) {
+  const bypassAudioObjectProblemInBuild = a => {
+    if (typeof window !== "undefined" && window) {
       if (window.Audio) {
         return new Audio(a)
       } else return null
     }
-    return null;
+    return null
   }
 
-  let audioFile = ren(url)
+  let audioFile = bypassAudioObjectProblemInBuild(url)
 
   const [audio] = useState(audioFile)
   const [play, setPlay] = useState(false)
