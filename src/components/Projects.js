@@ -14,7 +14,7 @@ const StyledContainer = styled.section`
   margin: 0 auto;
   ${media.tablet`padding: 70px 0;`};
   article {
-    margin-top: 250px;
+    margin-top: 300px;
   }
 `
 
@@ -64,7 +64,8 @@ const StyledImgContainer = styled.a`
   grid-row: 1 / -1;
   position: relative;
   z-index: 1;
-  background-color: ${theme.colors.cardGrey};
+  // background-color: ${theme.colors.cardGrey};
+  background-color: #506785;
   height: 100%;
   grid-column: 1 / -1;
   opacity: 0.25;
