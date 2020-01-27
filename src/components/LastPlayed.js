@@ -44,7 +44,6 @@ const StyledContainer = styled.div`
   }
   ${media.tablet`
     display: none;
-    display: none;
 `}
 `
 
