@@ -3,6 +3,7 @@ import useSpotify from "../hooks/use-spotify-recent"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import theme from "../styles/theme"
+import media from "../styles/media"
 
 const StyledImg = styled(Img)`
   n-height: 48px;
@@ -41,6 +42,9 @@ const StyledContainer = styled.div`
   .top {
     display: flex;
   }
+  ${media.tablet`
+    display: none;
+`}
 `
 
 const StyledSongDetails = styled.div`
