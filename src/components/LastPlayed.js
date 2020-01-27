@@ -3,6 +3,7 @@ import useSpotify from "../hooks/use-spotify-recent"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import theme from "../styles/theme"
+import { getRecentTracks } from "../utils/spotify"
 
 const StyledImg = styled(Img)`
   n-height: 48px;
@@ -61,6 +62,12 @@ const LastPlayed = () => {
   const url = recentTracks.preview
   // eslint-disable-next-line no-unused-vars
   const [play, handlePlay] = useAudio(url)
+  console.log(
+    getRecentTracks(
+      "AQBkLghvT8DPUpo9qL_5meXaNdvCJ-IlTgY-j7zA23nj37OHRGbI5yCzjhzGLIEnvSUGIjJmQAFjRPO1hM_KGU2KfJZEa7FALwngsC8RJPA2HQQwqPRM4IsqM-AThIxeriE",
+      50
+    )
+  )
 
   return (
     <StyledContainer onClick={handlePlay ? handlePlay : null}>
