@@ -133,3 +133,26 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   min-height: 100vh;
 `
+
+
+export const Loader = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #1b242f;
+  z-index: 2;
+  ${props => props.isLoaded 
+  ? css`
+    transform: scale(1.05);
+    opacity: 0;
+  `
+  : css`
+    transform: scale(1);
+    opacity: 1;
+  `}
+  transition: .6s cubic-bezier(.45, 0, .07, 1) transform, .6s cubic-bezier(.45, 0, .07, 1) opacity;
+  will-change: transform;
+`
