@@ -21,12 +21,12 @@ class Image extends Component {
   }
 
   render() {
-    const { src, alt, className, loader } = this.props
+    const { src, alt, sources, className, loader } = this.props
     const { isLoaded } = this.state
     return (
       <picture className={className}>
         {loader && loader({ isLoaded })}
-        {/* {sources && sources.map(this.renderSource)} */}
+        {sources && sources.map(this.renderSource)}
         <img onLoad={() => this.setLoaded()} src={src} alt={alt} />
       </picture>
     )

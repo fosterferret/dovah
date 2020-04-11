@@ -6,6 +6,7 @@ const screenSizesInPx = {
   tablet: 890,
   pseudo: 780,
   phablet: 540,
+  mobile2: 420,
   mobile: 380,
   tiny: 330,
 }

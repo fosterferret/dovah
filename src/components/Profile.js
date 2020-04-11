@@ -37,10 +37,7 @@ export default () => {
           content={() =>
             <>
             <h3>QUIS SUM</h3>            
-              <p>I wasn not always a software engineer. 
-              I focus primarily on building, prototyping and implementing user interfaces that are usable and scalable for any web-based platform.{' '}
-              <a href="https://dribbble.com/michelemazzucco" target="_blank" rel="noopener noreferrer">I enjoy experimenting</a>, <a href="https://github.com/michelemazzucco" target="_blank" rel="noopener noreferrer">building and trying</a> out new tools.</p>
-              <p>Sometimes <a href="https://twitter.com/MicheleMazzucco" target="_blank" rel="noopener noreferrer">I tweet</a> and share photos on <a href="https://www.instagram.com/michele.mazzucco/" target="_blank" rel="noopener noreferrer">Instagram</a>.</p>
+              <p>I was a kid first, a lover of elementary science and math next, and then a discrete tinkerer. I spent the first 15 years of my life poking around the insides of my parents' shelf stereo systems and Pentium 4 PC.</p>
             </>
           }
         />

@@ -10,7 +10,7 @@ export const Wrapper = styled.section`
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(5, 1fr);
   position: relative;
-  ${media.mobile`
+  ${media.mobile2`
     grid-template-columns: 100%;
     grid-template-rows: repeat(3, auto);
     grid-row-gap: 2rem;
@@ -19,7 +19,7 @@ export const Wrapper = styled.section`
 
 export const StyledImage = styled(Image)`
   grid-area: 1 / 4 / last-line / end;
-  background: #1e2733;
+  background: #1e2735;
   position: relative;
   overflow: hidden;
 
@@ -27,7 +27,7 @@ export const StyledImage = styled(Image)`
     content: "";
     padding-top: 150%;
     display: block;
-    ${media.mobile`
+    ${media.mobile2`
       padding-top: 100%;
     `}
   }
@@ -45,19 +45,18 @@ export const StyledImage = styled(Image)`
     opacity: 0.1;
     display: block;
     object-fit: cover;
-    ${media.mobile`
+    ${media.mobile2`
       opacity: .2;
     `}
   }
 
-  ${media.mobile`
+  ${media.mobile2`
     grid-area: 1 / 1 / 1 / 1;
     &:before {
       padding-top: 100%;
     }
   `}
 `
-
 
 export const InfoWrapper = styled.header`
   grid-row: 2 / 4;
@@ -66,7 +65,7 @@ export const InfoWrapper = styled.header`
   ${media.phablet`
     grid-column: 1 / 7;
   `}
-  ${media.mobile`
+  ${media.mobile2`
     grid-row: 2 / 3;
     grid-column: 1 / 1;
   `}
@@ -80,9 +79,9 @@ export const Content = styled.main`
     color: ${theme.colors.darkYellow};
   }
   p {
-      font-size: ${theme.fontSizes.md}
+    font-size: ${theme.fontSizes.md};
   }
-  ${media.mobile`
+  ${media.mobile2`
     margin-top: 1rem;
   `}
 
@@ -110,20 +109,23 @@ const ProfileIntro = ({ content }) => (
       src="images/profile/francis-portrait.jpg"
       alt="Francis Bulus"
       loader={({ isLoaded }) => <Loader isLoaded={isLoaded} />}
-    //   sources={[{
-    //     media: 'max-width: 40rem',
-    //     srcset: [
-    //       '/images/profile/michele-mazzucco-portrait-square.jpg 1x',
-    //       '/images/profile/michele-mazzucco-portrait-square-2x.jpg 2x',
-    //       '/images/profile/michele-mazzucco-portrait-square-3x.jpg 3x'
-    //     ]
-    //   },{
-    //     srcset: [
-    //       '/images/profile/michele-mazzucco-portrait.jpg 1x',
-    //       '/images/profile/michele-mazzucco-portrait-2x.jpg 2x',
-    //       '/images/profile/michele-mazzucco-portrait-3x.jpg 3x'
-    //     ]       
-    //   }]}
+      sources={[
+        {
+          media: "max-width: 40rem",
+          srcset: [
+            "/images/profile/francis-portrait-square.jpg 1x",
+            "/images/profile/francis-portrait-square-2x.jpg 2x",
+            "/images/profile/francis-portrait-square-3x.jpg 3x",
+          ],
+        },
+        {
+          srcset: [
+            "/images/profile/francis-portrait.jpg 1x",
+            "/images/profile/francis-portrait-2x.jpg 2x",
+            "/images/profile/francis-portrait-3x.jpg 3x",
+          ],
+        },
+      ]}
     />
   </Wrapper>
 )
