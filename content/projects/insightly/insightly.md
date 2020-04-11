@@ -2,7 +2,7 @@
 date: '2'
 title: "Insightly"
 github: "https://github.com/fosterferret"
-live: "https://github.com/fosterferret"
+live: "https://getinsightly.com/"
 image: "images/insightly.png"
 tech:
   - React

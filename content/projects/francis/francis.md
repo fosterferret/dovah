@@ -1,8 +1,8 @@
 ---
 date: '5'
-title: "Portfolio"
+title: "Francisbulus.com"
 github: "https://github.com/"
-live: "https://github.com/"
+live: "https://www.francisbulus.com/"
 image: "images/francis.png"
 tech:
   - React

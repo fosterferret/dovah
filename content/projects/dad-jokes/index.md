@@ -1,13 +1,13 @@
 ---
 date: '1'
-title: 'DadJokes'
-github: 'https://github.com/'
+title: 'MUDerilict'
+github: 'https://best-dad-jokes.netlify.com/'
 live: 'https://github.com/'
 image: 'images/dad-jokes.png'
 tech:
+  - Python
   - React
-  - Node
-  - Postgres
+  - SQLite
 feature: true
 height: 450
 ---
