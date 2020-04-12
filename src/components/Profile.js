@@ -45,7 +45,7 @@ export default () => {
                 I had unfinished business with breaking things apart and putting them back together (but I had clumsy hands now), I decided to become a Software Engineer, a field that would leverage my love for logic. 
               </p>
               <p>
-              I applied and got into Lambda School in August, 2019. I now spend my days eating too-saucy chicken wings while building highy scalable tools for everyday use with Javascript (Vanilla, Node, React) Python, GraphQL, SQL, Postgres, MongoDB, Firebase, Go, HTML, CSS, and AWS.
+              I applied and got into Lambda School in August, 2019. I now spend my days eating too-saucy chicken wings while building highy scalable tools for the web with Javascript (Vanilla, Node, React) Python, GraphQL, SQL, Postgres, MongoDB, Firebase, Go, HTML, CSS, and AWS.
               </p>
               <p>And when I&apos;m not building things, I&apos;m usually talking about video games, software, books, and Batman on my Twitter.</p>
             </>
