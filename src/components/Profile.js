@@ -20,6 +20,7 @@ ${media.phablet`
   width: 100%;
   margin: 4rem auto 0;
   padding: 0 3rem 6rem;
+  margin-top: 8rem !important;
 `}
 
 ${media.mobile`
