@@ -14,7 +14,8 @@ const StyledContainer = styled.section`
   margin: 0 auto;
   ${media.tablet`padding: 70px 0;`};
   article {
-    margin-top: 70px;
+    margin-top: 300px;
+    ${media.tablet`margin-top: 70px;`};
   }
 `
 

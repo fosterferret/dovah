@@ -59,10 +59,11 @@ export const StyledImage = styled(Image)`
 `
 
 export const InfoWrapper = styled.header`
-  grid-row: 2 / 4;
+  grid-row: 1 / 4;
   grid-column: 1 / 6;
   z-index: 3;
   ${media.phablet`
+    grid-row: 2 / 4;
     grid-column: 1 / 7;
   `}
   ${media.mobile2`
@@ -72,14 +73,14 @@ export const InfoWrapper = styled.header`
 `
 
 export const Content = styled.main`
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   line-height: 1.8em;
   h3 {
     font-family: ${theme.fonts.Inconsolata};
     color: ${theme.colors.darkYellow};
   }
   p {
-    font-size: ${theme.fontSizes.md};
+    font-size: 16.5px;
   }
   ${media.mobile2`
     margin-top: 1rem;
