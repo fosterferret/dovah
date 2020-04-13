@@ -1,14 +1,15 @@
 ---
+date: '2'
 title: "Insightly"
-github: "https://github.com/fosterferret"
-live: "https://github.com/fosterferret"
+github: "https://github.com/LABS-EU3/react_blog_frontend"
+live: "https://getinsightly.com/"
 image: "images/insightly.png"
 tech:
   - React
   - Node
-  - SQLite
+  - Postgres
 feature: true
 height: 450
 ---
 
-A gamified erm chore-tracking app built from the ground up with React for homes to effectively manage responsibilities.
+A platform for writers to publish insights and guage readership over a period of time, and for readers to interact with writers.

@@ -58,9 +58,9 @@ const SideFooter = () => (
       className="double-underline"
       href={`mailto:notchera@gmail.com`}
     >
-      notchera@gmail.com
+      NOTCHERA@GMAIL.COM
     </Sider>
-    <Sider orientation="right">Download my resumé</Sider>
+    <Sider orientation="right">DOWNLOAD MY RESUMÉ</Sider>
   </Wrapper>
 )
 

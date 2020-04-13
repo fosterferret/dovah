@@ -1,6 +1,6 @@
 export function containsRvh(propertyValue) {
   const rvhRegex = /(\d+(\.\d*)?)rvh(?!\w)/
-  return rvhRegex.test(propertyValue)
+  return rvhRegex.test(propertyValue);
 }
 
 function replaceRvhWithPx(propertyStringValue, windowHeight) {

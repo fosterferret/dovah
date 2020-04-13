@@ -7,7 +7,7 @@ const Head = () => (
     <title itemProp="name" lang="en">
       Francis Bulus | Software Developer
     </title>
-    <link rel="canonical" href="https://francisbulus.com" />
+    <link rel="canonical" href="https://gracious-neumann-9793f9.netlify.com/" />
     <link
       rel="preload"
       as="font"
