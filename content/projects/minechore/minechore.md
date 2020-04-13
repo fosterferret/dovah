@@ -1,7 +1,7 @@
 ---
 date: "3"
 title: "MineChore"
-github: "https://github.com/fosterferret"
+github: "https://github.com/home-chore-tracker-eu"
 live: "https://github.com/fosterferret"
 image: "images/minechore.png"
 tech:

@@ -12,4 +12,4 @@ feature: true
 height: 450
 ---
 
-A publishing platform for writers with built-in analytic features to guage readership and writer growth over a period of time.
+A platform for writers to publish insights and guage readership over a period of time, and for readers to interact with writers.

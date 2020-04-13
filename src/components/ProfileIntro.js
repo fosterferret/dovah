@@ -92,11 +92,16 @@ export const Content = styled.main`
 
   a {
     color: #fff;
-    border-bottom: 1px dotted ${theme.colors.darkNavyEnd};
+    border-bottom: 1px dotted white;
 
     &:hover {
       border-bottom-color: ${theme.colors.darkYellow};
     }
+  }
+  span {
+    color: ${theme.colors.darkYellow};
+    font-family: ${theme.fonts.Inconsolata};
+    font-size: 13px;
   }
 `
 

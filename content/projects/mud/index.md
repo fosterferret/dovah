@@ -12,4 +12,4 @@ feature: true
 height: 450
 ---
 
-A single repository of dad jokes that is easy to access, create jokes, navigate and can be viewed by anyone.
+A multi-user dungeon game with the simple objective of navigating an abandoned spaceship to find a radio.

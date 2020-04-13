@@ -42,12 +42,12 @@ export default () => {
               I went on to give up my makeshift screwdrivers for Sequencing Electrophoresis Systems at the university as a Biochemist and Geneticist. 
               </p>
               <p>After that, I worked as a managing editor at a tech publication and then a social impact operations lead at a startup. Realizing at some point that
-                I had unfinished business with breaking things apart and putting them back together (but I had clumsy hands now), I decided to become a Software Engineer, a field that would leverage my love for logic. 
+                I had unfinished business with breaking things apart and putting them back together (but I had clumsy hands now), I decided to become a Software Engineer. 
               </p>
               <p>
-              I applied and got into Lambda School in August, 2019. I now spend my days eating too-saucy chicken wings while building highy scalable tools for the web with Javascript (Vanilla, Node, React) Python, GraphQL, SQL, Postgres, MongoDB, Firebase, Go, HTML, CSS, and AWS.
+              I applied and got into Lambda School in August, 2019. I now spend my days eating too-saucy chicken wings while building highy scalable tools for the web with <span>Javascript (Vanilla, Node, React), Python, GraphQL, SQL, Postgres, MongoDB, Firebase, Go, HTML, CSS, and AWS.</span>
               </p>
-              <p>And when I&apos;m not building things, I&apos;m usually talking about video games, software, books, and Batman on my Twitter.</p>
+              <p>And when I&apos;m not building things, <a href="https://twitter.com/AuxiNom" target="_blank" rel="noopener noreferrer">I&apos;m usually talking about video games, software, books, and Batman on my Twitter.</a></p>
             </>
           }
         />
