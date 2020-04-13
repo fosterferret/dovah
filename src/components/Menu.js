@@ -128,7 +128,7 @@ const Menu = ({ open }) => (
           GITHUB
         </a>
       </NavItem>
-      <NavItem>
+      {/* <NavItem>
         <a
           href="https://medium.com/@AuxiNom"
           rel="noopener noreferrer"
@@ -136,10 +136,10 @@ const Menu = ({ open }) => (
         >
           MEDIUM
         </a>
-      </NavItem>
+      </NavItem> */}
       <NavItem>
         <a
-          href="https://github.com/fosterferret"
+          href="https://www.linkedin.com/in/francis-bulus-b61098191/"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -164,9 +164,9 @@ const Menu = ({ open }) => (
         </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink to="/lists" activeClassName="current-page">
+        {/* <NavLink to="/lists" activeClassName="current-page">
           LISTS
-        </NavLink>
+        </NavLink> */}
       </NavItem>
     </Nav>
   </NavWrapper>
