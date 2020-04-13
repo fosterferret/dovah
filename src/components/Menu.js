@@ -19,9 +19,6 @@ const NavWrapper = styled.nav`
   ${generateSpace("padding")};
   ${props => (!props.open ? `counter-reset: li;` : "")}
 
-  .current-page {
-    color: ${theme.colors.darkYellow};
-  }
 
   ul:last-child li {
     text-align: right;
@@ -65,6 +62,8 @@ export const NavItem = styled.li`
   padding: 0.5rem 0;
   line-height: 0.85em;
 
+
+
   &:last-child {
     padding-bottom: 0;
   }
@@ -98,7 +97,7 @@ export const NavLink = styled(Link).attrs({
   activeClassName: "active",
 })`
   &.active {
-    color: ${theme.colors.darkYellow};
+    color: #fff;
 
     &::before {
       transform: translate(0, -50%);
@@ -106,6 +105,11 @@ export const NavLink = styled(Link).attrs({
     }
   }
 `
+
+
+const EmailMe = ({ className, text }) => 
+  <a className={className} rel="noopener" href='mailto:notchera@gmail.com'>{text}</a>
+
 
 const Menu = ({ open }) => (
   <NavWrapper open={open}>
@@ -128,7 +132,7 @@ const Menu = ({ open }) => (
           GITHUB
         </a>
       </NavItem>
-      {/* <NavItem>
+      <NavItem>
         <a
           href="https://medium.com/@AuxiNom"
           rel="noopener noreferrer"
@@ -136,7 +140,7 @@ const Menu = ({ open }) => (
         >
           MEDIUM
         </a>
-      </NavItem> */}
+      </NavItem>
       <NavItem>
         <a
           href="https://www.linkedin.com/in/francis-bulus-b61098191/"
@@ -163,11 +167,7 @@ const Menu = ({ open }) => (
           PROFILE
         </NavLink>
       </NavItem>
-      <NavItem>
-        {/* <NavLink to="/lists" activeClassName="current-page">
-          LISTS
-        </NavLink> */}
-      </NavItem>
+      <NavItem highlight><EmailMe text="CONTACT"/></NavItem>
     </Nav>
   </NavWrapper>
 )

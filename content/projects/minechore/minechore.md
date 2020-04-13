@@ -2,7 +2,7 @@
 date: "3"
 title: "MineChore"
 github: "https://github.com/home-chore-tracker-eu"
-live: "https://github.com/fosterferret"
+live: "m"
 image: "images/minechore.png"
 tech:
   - React

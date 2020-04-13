@@ -232,9 +232,11 @@ const StyledLinkWrapper = styled.div`
 const Links = ({ github, live }) => {
   return (
     <>
-      <a href={live} rel="noopener noreferrer" target="_blank">
-        <Live width={20} height={20} />
-      </a>
+      {live !== "m" && (
+        <a href={live} rel="noopener noreferrer" target="_blank">
+          <Live width={20} height={20} />
+        </a>
+      )}
       <a href={github} rel="noopener noreferrer" target="_blank">
         <Github width={20} height={20} />
       </a>
