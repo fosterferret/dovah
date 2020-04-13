@@ -1,13 +1,13 @@
 ---
 date: '4'
-title: 'DadJokes'
-github: 'https://github.com/'
-live: 'https://best-dad-jokes.netlify.com/'
+title: 'MUDERILICT'
+github: 'https://github.com/CSEU3-MUD-BW'
+live: 'https://mud-game-client.now.sh/'
 image: 'images/dad-jokes.png'
 tech:
+  - Python
   - React
-  - Node
-  - Postgres
+  - Django
 feature: true
 height: 450
 ---

@@ -1,7 +1,7 @@
 ---
 date: '2'
 title: "Insightly"
-github: "https://github.com/fosterferret"
+github: "https://github.com/LABS-EU3/react_blog_frontend"
 live: "https://getinsightly.com/"
 image: "images/insightly.png"
 tech:
