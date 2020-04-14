@@ -125,7 +125,7 @@ const Menu = ({ open }) => (
       </NavItem>
       <NavItem>
         <a
-          href="https://github.com/fosterferret"
+          href="https://github.com/francisbulus"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -143,7 +143,7 @@ const Menu = ({ open }) => (
       </NavItem>
       <NavItem>
         <a
-          href="https://www.linkedin.com/in/francis-bulus-b61098191/"
+          href="https://www.linkedin.com/in/francis-bulus"
           rel="noopener noreferrer"
           target="_blank"
         >
