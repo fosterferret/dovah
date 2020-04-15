@@ -60,7 +60,7 @@ const SideFooter = () => (
     >
       NOTCHERA@GMAIL.COM
     </Sider>
-    <Sider orientation="right">DOWNLOAD MY RESUMÉ</Sider>
+    <Sider orientation="right" href={`https://drive.google.com/file/d/194sSscqYiursatIyZZKiP4kBnV9lSxkR/view?usp=sharing`}>DOWNLOAD MY RESUMÉ</Sider>
   </Wrapper>
 )
 
