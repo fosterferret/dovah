@@ -2,7 +2,7 @@
 date: '5'
 title: "Francisbulus.com"
 github: "https://github.com/francisbulus/dovah"
-live: "https://www.francisbulus.com/"
+live: "https://www.francisbulus.com"
 image: "images/francis.png"
 tech:
   - React
