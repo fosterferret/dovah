@@ -1,7 +1,7 @@
 ---
 date: '1'
 title: 'DadJokes'
-github: 'https://best-dad-jokes.netlify.com/'
+github: 'https://github.com/dad-jokes-webeu'
 live: 'https://best-dad-jokes.netlify.com/'
 image: 'images/dad-jokes.png'
 tech:
